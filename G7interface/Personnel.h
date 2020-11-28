@@ -168,7 +168,7 @@ namespace G7interface {
 			this->label3->BackColor = System::Drawing::Color::Gainsboro;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(24, 82);
+			this->label3->Location = System::Drawing::Point(24, 85);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(101, 29);
 			this->label3->TabIndex = 7;
