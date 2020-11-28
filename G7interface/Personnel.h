@@ -206,7 +206,7 @@ namespace G7interface {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1034, 615);
+			this->ClientSize = System::Drawing::Size(1029, 614);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
