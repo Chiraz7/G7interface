@@ -185,6 +185,7 @@ namespace G7interface {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Bouton personnel
 		Personnel^ pe = gcnew Personnel;
 		this->Hide();
 		pe->Show();
@@ -195,16 +196,19 @@ namespace G7interface {
 		c->Show();
 	}
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Bouton commande
 	Commande^ co = gcnew Commande;
 	this->Hide();
 	co->Show();
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Bouton stock
 		Stock^ s = gcnew Stock;
 	this->Hide();
 	s->Show();
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Bouton statistiques
 	Statistiques^ stat = gcnew Statistiques;
 	this->Hide();
 	stat->Show();
@@ -212,6 +216,7 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) { 
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	//Bouton message de bienvenue
 }
 };
 }
