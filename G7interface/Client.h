@@ -44,6 +44,7 @@ namespace G7interface {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Button^ button6;
 
 	private:
 		/// <summary>
@@ -68,6 +69,7 @@ namespace G7interface {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -197,6 +199,16 @@ namespace G7interface {
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Prénom : ";
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(429, 45);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->TabIndex = 9;
+			this->button6->Text = L"button6";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Client::button6_Click);
+			// 
 			// Client
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -204,6 +216,7 @@ namespace G7interface {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1031, 610);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -232,6 +245,9 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void Client_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }

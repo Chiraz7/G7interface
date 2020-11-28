@@ -188,24 +188,33 @@ namespace G7interface {
 		//Bouton personnel
 		Personnel^ pe = gcnew Personnel;
 		this->Hide();
-		pe->Show();
+		G7interface::Commande monFormulaire1;
+		pe->ShowDialog();
+		this->Show();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-			Client^ c = gcnew Client;
+		Client^ c = gcnew Client;
 		this->Hide();
-		c->Show();
+		G7interface::Commande monFormulaire1;
+		c->ShowDialog();
+		this->Show();
 	}
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Bouton commande
 	Commande^ co = gcnew Commande;
 	this->Hide();
-	co->Show();
+	G7interface::Commande monFormulaire1;
+	co->ShowDialog();
+	this->Show();
+
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Bouton stock
-		Stock^ s = gcnew Stock;
+	Stock^ s = gcnew Stock;
 	this->Hide();
-	s->Show();
+	G7interface::Commande monFormulaire1;
+	s->ShowDialog();
+	this->Show();
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Bouton statistiques

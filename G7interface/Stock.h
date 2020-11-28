@@ -44,6 +44,7 @@ namespace G7interface {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Button^ button6;
 
 	private:
 		/// <summary>
@@ -68,6 +69,7 @@ namespace G7interface {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -200,6 +202,16 @@ namespace G7interface {
 			this->dataGridView1->Size = System::Drawing::Size(450, 450);
 			this->dataGridView1->TabIndex = 8;
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(457, 49);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->TabIndex = 9;
+			this->button6->Text = L"button6";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Stock::button6_Click);
+			// 
 			// Stock
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -207,6 +219,7 @@ namespace G7interface {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1066, 607);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
@@ -235,6 +248,9 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void Stock_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }
