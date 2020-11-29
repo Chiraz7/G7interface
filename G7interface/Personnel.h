@@ -10,7 +10,7 @@ namespace G7interface {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description r�sum�e de Personnel
+	/// Description résumée de Personnel
 	/// </summary>
 	public ref class Personnel : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace G7interface {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilis�es.
+		/// Nettoyage des ressources utilisées.
 		/// </summary>
 		~Personnel()
 		{
@@ -45,17 +45,27 @@ namespace G7interface {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::ListBox^ listBox1;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::TextBox^ textBox6;
 
 	private:
 		/// <summary>
-		/// Variable n�cessaire au concepteur.
+		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// M�thode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette m�thode avec l'�diteur de code.
+		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette méthode avec l'éditeur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -70,6 +80,16 @@ namespace G7interface {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -82,7 +102,7 @@ namespace G7interface {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::Transparent;
-			this->button1->Location = System::Drawing::Point(56, 153);
+			this->button1->Location = System::Drawing::Point(10, 202);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(125, 42);
 			this->button1->TabIndex = 0;
@@ -97,11 +117,11 @@ namespace G7interface {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::Transparent;
-			this->button2->Location = System::Drawing::Point(370, 153);
+			this->button2->Location = System::Drawing::Point(350, 203);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(125, 41);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"Cr�er";
+			this->button2->Text = L"Créer";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Personnel::button2_Click);
 			// 
@@ -112,7 +132,7 @@ namespace G7interface {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::Transparent;
-			this->button3->Location = System::Drawing::Point(56, 555);
+			this->button3->Location = System::Drawing::Point(10, 623);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(125, 38);
 			this->button3->TabIndex = 2;
@@ -127,7 +147,7 @@ namespace G7interface {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::Color::Transparent;
-			this->button4->Location = System::Drawing::Point(370, 557);
+			this->button4->Location = System::Drawing::Point(350, 623);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(134, 38);
 			this->button4->TabIndex = 3;
@@ -137,16 +157,19 @@ namespace G7interface {
 			// 
 			// button5
 			// 
-			this->button5->BackColor = System::Drawing::Color::White;
+			this->button5->BackColor = System::Drawing::Color::Transparent;
 			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(572, 470);
+			this->button5->ForeColor = System::Drawing::Color::White;
+			this->button5->Location = System::Drawing::Point(151, 405);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(450, 123);
+			this->button5->Size = System::Drawing::Size(187, 70);
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"Enregistrer";
 			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &Personnel::button5_Click);
 			// 
 			// label1
 			// 
@@ -156,7 +179,7 @@ namespace G7interface {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(51, 9);
+			this->label1->Location = System::Drawing::Point(109, 9);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(45, 29);
 			this->label1->TabIndex = 5;
@@ -170,7 +193,7 @@ namespace G7interface {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(51, 47);
+			this->label2->Location = System::Drawing::Point(109, 47);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(77, 29);
 			this->label2->TabIndex = 6;
@@ -184,33 +207,136 @@ namespace G7interface {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::White;
-			this->label3->Location = System::Drawing::Point(51, 85);
+			this->label3->Location = System::Drawing::Point(109, 85);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(101, 29);
 			this->label3->TabIndex = 7;
-			this->label3->Text = L"Pr�nom :";
+			this->label3->Text = L"Prénom :";
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(572, 12);
+			this->dataGridView1->Location = System::Drawing::Point(529, 189);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->RowTemplate->Height = 28;
-			this->dataGridView1->Size = System::Drawing::Size(450, 440);
+			this->dataGridView1->Size = System::Drawing::Size(571, 312);
 			this->dataGridView1->TabIndex = 8;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Personnel::dataGridView1_CellContentClick);
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(425, 43);
+			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
+			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button6->Location = System::Drawing::Point(2, 1);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->Size = System::Drawing::Size(54, 50);
 			this->button6->TabIndex = 9;
-			this->button6->Text = L"button6";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &Personnel::button6_Click);
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::White;
+			this->label4->Location = System::Drawing::Point(524, 22);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(101, 29);
+			this->label4->TabIndex = 10;
+			this->label4->Text = L"Adresse :";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
+			this->label5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::White;
+			this->label5->Location = System::Drawing::Point(524, 69);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(73, 29);
+			this->label5->TabIndex = 11;
+			this->label5->Text = L"Ville : ";
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(234, 12);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(240, 26);
+			this->textBox1->TabIndex = 12;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox1_TextChanged);
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(234, 50);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(240, 26);
+			this->textBox2->TabIndex = 13;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox2_TextChanged);
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(234, 88);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(240, 26);
+			this->textBox3->TabIndex = 14;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox3_TextChanged);
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(724, 15);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(376, 26);
+			this->textBox4->TabIndex = 15;
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox4_TextChanged);
+			// 
+			// listBox1
+			// 
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->ItemHeight = 20;
+			this->listBox1->Location = System::Drawing::Point(724, 53);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(376, 84);
+			this->listBox1->TabIndex = 16;
+			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Personnel::listBox1_SelectedIndexChanged);
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(529, 516);
+			this->textBox5->Multiline = true;
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->textBox5->Size = System::Drawing::Size(571, 147);
+			this->textBox5->TabIndex = 17;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox5_TextChanged);
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
+			this->label6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->ForeColor = System::Drawing::Color::White;
+			this->label6->Location = System::Drawing::Point(524, 145);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(203, 29);
+			this->label6->TabIndex = 18;
+			this->label6->Text = L"Date d\'embauche : ";
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(724, 149);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(376, 26);
+			this->textBox6->TabIndex = 19;
+			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox6_TextChanged);
 			// 
 			// Personnel
 			// 
@@ -218,7 +344,17 @@ namespace G7interface {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1034, 615);
+			this->ClientSize = System::Drawing::Size(1112, 667);
+			this->Controls->Add(this->textBox6);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->listBox1);
+			this->Controls->Add(this->textBox4);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->label3);
@@ -243,17 +379,33 @@ namespace G7interface {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 
-private: System::Void Personnel_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void Personnel_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
+private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
-}
+} 
