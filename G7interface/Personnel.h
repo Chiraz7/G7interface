@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace G7interface {
 
@@ -10,7 +10,7 @@ namespace G7interface {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de Personnel
+	/// Description rï¿½sumï¿½e de Personnel
 	/// </summary>
 	public ref class Personnel : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace G7interface {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~Personnel()
 		{
@@ -44,17 +44,18 @@ namespace G7interface {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Button^ button6;
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -68,6 +69,7 @@ namespace G7interface {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -99,7 +101,7 @@ namespace G7interface {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(125, 41);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"Créer";
+			this->button2->Text = L"Crï¿½er";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Personnel::button2_Click);
 			// 
@@ -186,7 +188,7 @@ namespace G7interface {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(101, 29);
 			this->label3->TabIndex = 7;
-			this->label3->Text = L"Prénom :";
+			this->label3->Text = L"Prï¿½nom :";
 			// 
 			// dataGridView1
 			// 
@@ -200,13 +202,24 @@ namespace G7interface {
 			this->dataGridView1->TabIndex = 8;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Personnel::dataGridView1_CellContentClick);
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(425, 43);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->TabIndex = 9;
+			this->button6->Text = L"button6";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Personnel::button6_Click);
+			// 
 			// Personnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1029, 614);
+			this->ClientSize = System::Drawing::Size(1034, 615);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
@@ -238,6 +251,9 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void Personnel_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }
