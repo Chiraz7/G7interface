@@ -134,7 +134,7 @@ namespace G7interface {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(7, 570);
+			this->button3->Location = System::Drawing::Point(6, 591);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(125, 40);
 			this->button3->TabIndex = 2;
@@ -167,6 +167,7 @@ namespace G7interface {
 			this->dataGridView1->RowTemplate->Height = 28;
 			this->dataGridView1->Size = System::Drawing::Size(531, 238);
 			this->dataGridView1->TabIndex = 4;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Client::dataGridView1_CellContentClick);
 			// 
 			// button5
 			// 
@@ -180,6 +181,7 @@ namespace G7interface {
 			this->button5->TabIndex = 5;
 			this->button5->Text = L"Enregistrer";
 			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &Client::button5_Click);
 			// 
 			// label1
 			// 
@@ -194,6 +196,7 @@ namespace G7interface {
 			this->label1->Size = System::Drawing::Size(45, 29);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"ID :";
+			this->label1->Click += gcnew System::EventHandler(this, &Client::label1_Click);
 			// 
 			// label2
 			// 
@@ -208,6 +211,7 @@ namespace G7interface {
 			this->label2->Size = System::Drawing::Size(77, 29);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"Nom : ";
+			this->label2->Click += gcnew System::EventHandler(this, &Client::label2_Click);
 			// 
 			// label3
 			// 
@@ -222,6 +226,7 @@ namespace G7interface {
 			this->label3->Size = System::Drawing::Size(106, 29);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Prénom : ";
+			this->label3->Click += gcnew System::EventHandler(this, &Client::label3_Click);
 			// 
 			// button6
 			// 
@@ -248,6 +253,7 @@ namespace G7interface {
 			this->label4->Size = System::Drawing::Size(202, 29);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Date de naissance :";
+			this->label4->Click += gcnew System::EventHandler(this, &Client::label4_Click);
 			// 
 			// label5
 			// 
@@ -263,6 +269,7 @@ namespace G7interface {
 			this->label5->Size = System::Drawing::Size(199, 29);
 			this->label5->TabIndex = 11;
 			this->label5->Text = L"Date du 1er achat :";
+			this->label5->Click += gcnew System::EventHandler(this, &Client::label5_Click);
 			// 
 			// label6
 			// 
@@ -278,6 +285,7 @@ namespace G7interface {
 			this->label6->Size = System::Drawing::Size(250, 29);
 			this->label6->TabIndex = 12;
 			this->label6->Text = L"Adresse de facturation : ";
+			this->label6->Click += gcnew System::EventHandler(this, &Client::label6_Click);
 			// 
 			// label7
 			// 
@@ -293,6 +301,7 @@ namespace G7interface {
 			this->label7->Size = System::Drawing::Size(220, 29);
 			this->label7->TabIndex = 13;
 			this->label7->Text = L"Adresse de livraison :";
+			this->label7->Click += gcnew System::EventHandler(this, &Client::label7_Click);
 			// 
 			// textBox1
 			// 
@@ -300,6 +309,7 @@ namespace G7interface {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(260, 26);
 			this->textBox1->TabIndex = 14;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Client::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -307,6 +317,7 @@ namespace G7interface {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(260, 26);
 			this->textBox2->TabIndex = 15;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Client::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
@@ -314,6 +325,7 @@ namespace G7interface {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(260, 26);
 			this->textBox3->TabIndex = 16;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Client::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
@@ -321,6 +333,7 @@ namespace G7interface {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(288, 26);
 			this->textBox4->TabIndex = 17;
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Client::textBox4_TextChanged);
 			// 
 			// textBox5
 			// 
@@ -330,6 +343,7 @@ namespace G7interface {
 			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox5->Size = System::Drawing::Size(288, 26);
 			this->textBox5->TabIndex = 18;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Client::textBox5_TextChanged);
 			// 
 			// textBox6
 			// 
@@ -339,6 +353,7 @@ namespace G7interface {
 			this->textBox6->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox6->Size = System::Drawing::Size(288, 26);
 			this->textBox6->TabIndex = 19;
+			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Client::textBox6_TextChanged);
 			// 
 			// textBox7
 			// 
@@ -346,6 +361,7 @@ namespace G7interface {
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(288, 26);
 			this->textBox7->TabIndex = 20;
+			this->textBox7->TextChanged += gcnew System::EventHandler(this, &Client::textBox7_TextChanged);
 			// 
 			// textBox8
 			// 
@@ -355,6 +371,7 @@ namespace G7interface {
 			this->textBox8->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox8->Size = System::Drawing::Size(531, 124);
 			this->textBox8->TabIndex = 21;
+			this->textBox8->TextChanged += gcnew System::EventHandler(this, &Client::textBox8_TextChanged);
 			// 
 			// Client
 			// 
@@ -395,18 +412,74 @@ namespace G7interface {
 
 		}
 #pragma endregion
+		// BOUTON AFFICHER
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   // BOUTON CREER
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   // BOUTON MODIFIER
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // BOUTON SUPPRIMER
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void Client_Load(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // BOUTON RETOUR 
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+	   // LABEL ID
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // TEXTBOX ID
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL NOM
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // TEXTBOX NOM
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL PRENOM
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // TEXTBOX PRENOM
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL DATE DE NAISSANCE
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // TEXTBOX DATE DE NAISSANCE
+private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL DATE DU PREMIER ACHAT
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // TEXTBOX DATE DU PREMIER ACHAT
+private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL ADRESSE DE LIVRAISON
+private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // TEXTBOX ADRESSE DE LIVRAISON
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL ADRESSE DE FACTURATION
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // TEXTBOX ADRESSE DE FACTURATION 
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // DATEGRIDVIEW
+private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+	   // TEXTBOX MESSAGE
+private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //BOUTON ENREGISTRER
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

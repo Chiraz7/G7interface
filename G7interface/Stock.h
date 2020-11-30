@@ -181,6 +181,7 @@ namespace G7interface {
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"Enregistrer";
 			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &Stock::button5_Click);
 			// 
 			// label1
 			// 
@@ -210,6 +211,7 @@ namespace G7interface {
 			this->label2->Size = System::Drawing::Size(77, 29);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"Nom : ";
+			this->label2->Click += gcnew System::EventHandler(this, &Stock::label2_Click);
 			// 
 			// label3
 			// 
@@ -224,6 +226,7 @@ namespace G7interface {
 			this->label3->Size = System::Drawing::Size(106, 29);
 			this->label3->TabIndex = 7;
 			this->label3->Text = L"Prénom : ";
+			this->label3->Click += gcnew System::EventHandler(this, &Stock::label3_Click);
 			// 
 			// dataGridView1
 			// 
@@ -261,6 +264,7 @@ namespace G7interface {
 			this->label4->Size = System::Drawing::Size(116, 29);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Quantité : ";
+			this->label4->Click += gcnew System::EventHandler(this, &Stock::label4_Click);
 			// 
 			// label5
 			// 
@@ -275,6 +279,7 @@ namespace G7interface {
 			this->label5->Size = System::Drawing::Size(112, 29);
 			this->label5->TabIndex = 11;
 			this->label5->Text = L"Couleur  : ";
+			this->label5->Click += gcnew System::EventHandler(this, &Stock::label5_Click);
 			// 
 			// label6
 			// 
@@ -289,6 +294,7 @@ namespace G7interface {
 			this->label6->Size = System::Drawing::Size(127, 29);
 			this->label6->TabIndex = 12;
 			this->label6->Text = L"Référence : ";
+			this->label6->Click += gcnew System::EventHandler(this, &Stock::label6_Click);
 			// 
 			// label7
 			// 
@@ -303,6 +309,7 @@ namespace G7interface {
 			this->label7->Size = System::Drawing::Size(107, 29);
 			this->label7->TabIndex = 13;
 			this->label7->Text = L"Prix TTC : ";
+			this->label7->Click += gcnew System::EventHandler(this, &Stock::label7_Click);
 			// 
 			// label8
 			// 
@@ -317,6 +324,7 @@ namespace G7interface {
 			this->label8->Size = System::Drawing::Size(68, 29);
 			this->label8->TabIndex = 14;
 			this->label8->Text = L"TVA : ";
+			this->label8->Click += gcnew System::EventHandler(this, &Stock::label8_Click);
 			// 
 			// label9
 			// 
@@ -331,6 +339,7 @@ namespace G7interface {
 			this->label9->Size = System::Drawing::Size(97, 29);
 			this->label9->TabIndex = 15;
 			this->label9->Text = L"Prix HT : ";
+			this->label9->Click += gcnew System::EventHandler(this, &Stock::label9_Click);
 			// 
 			// textBox1
 			// 
@@ -457,42 +466,86 @@ namespace G7interface {
 
 		}
 #pragma endregion
+		//Bouton Afficher
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   //Bouton Créer
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   //Bouton Modifier
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //Bouton Supprimer
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void Stock_Load(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //Bouton RETOUR
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
 }
+	   // Textbox ID
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // Textbox Nom
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //Textbox Prénom
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // Textbox Réference 
 private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // Textbox Couleur
 private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //TextBox Quantité
 private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //Textbox prix HT
 private: System::Void textBox9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //TextBox TVA
 private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	  //TextBox Prix TTC
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //Label ID
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //DATAGRIDVIEW
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
+	   // TextboX MESSAGE
 private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Label Nom
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Label Prénom
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Label Référence
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Label Couleur
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Label Quantité
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Label Prix HT
+private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Label TVA
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Label Prix TTC
+private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Bouton Enregistrer
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

@@ -194,6 +194,7 @@ namespace G7interface {
 			this->label1->Size = System::Drawing::Size(50, 29);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"ID : ";
+			this->label1->Click += gcnew System::EventHandler(this, &Commande::label1_Click);
 			// 
 			// label2
 			// 
@@ -208,6 +209,7 @@ namespace G7interface {
 			this->label2->Size = System::Drawing::Size(238, 29);
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"Référence commande :";
+			this->label2->Click += gcnew System::EventHandler(this, &Commande::label2_Click);
 			// 
 			// label3
 			// 
@@ -222,6 +224,7 @@ namespace G7interface {
 			this->label3->Size = System::Drawing::Size(190, 29);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"Date de livraison :";
+			this->label3->Click += gcnew System::EventHandler(this, &Commande::label3_Click);
 			// 
 			// dataGridView1
 			// 
@@ -275,6 +278,7 @@ namespace G7interface {
 			this->label4->Size = System::Drawing::Size(181, 29);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Date d\'émission :";
+			this->label4->Click += gcnew System::EventHandler(this, &Commande::label4_Click);
 			// 
 			// label5
 			// 
@@ -289,6 +293,7 @@ namespace G7interface {
 			this->label5->Size = System::Drawing::Size(201, 29);
 			this->label5->TabIndex = 11;
 			this->label5->Text = L"Date de paiement :";
+			this->label5->Click += gcnew System::EventHandler(this, &Commande::label5_Click);
 			// 
 			// label6
 			// 
@@ -303,6 +308,7 @@ namespace G7interface {
 			this->label6->Size = System::Drawing::Size(224, 29);
 			this->label6->TabIndex = 12;
 			this->label6->Text = L"Moyen de paiement :";
+			this->label6->Click += gcnew System::EventHandler(this, &Commande::label6_Click);
 			// 
 			// label7
 			// 
@@ -317,6 +323,7 @@ namespace G7interface {
 			this->label7->Size = System::Drawing::Size(154, 29);
 			this->label7->TabIndex = 13;
 			this->label7->Text = L"Montant TTC :";
+			this->label7->Click += gcnew System::EventHandler(this, &Commande::label7_Click);
 			// 
 			// label8
 			// 
@@ -331,6 +338,7 @@ namespace G7interface {
 			this->label8->Size = System::Drawing::Size(156, 29);
 			this->label8->TabIndex = 14;
 			this->label8->Text = L"Montant TVA :";
+			this->label8->Click += gcnew System::EventHandler(this, &Commande::label8_Click);
 			// 
 			// label9
 			// 
@@ -345,6 +353,7 @@ namespace G7interface {
 			this->label9->Size = System::Drawing::Size(144, 29);
 			this->label9->TabIndex = 15;
 			this->label9->Text = L"Montant HT :";
+			this->label9->Click += gcnew System::EventHandler(this, &Commande::label9_Click);
 			// 
 			// label10
 			// 
@@ -359,6 +368,7 @@ namespace G7interface {
 			this->label10->Size = System::Drawing::Size(111, 29);
 			this->label10->TabIndex = 16;
 			this->label10->Text = L"Quantité :";
+			this->label10->Click += gcnew System::EventHandler(this, &Commande::label10_Click);
 			// 
 			// label11
 			// 
@@ -373,6 +383,7 @@ namespace G7interface {
 			this->label11->Size = System::Drawing::Size(133, 29);
 			this->label11->TabIndex = 17;
 			this->label11->Text = L"Nom article:";
+			this->label11->Click += gcnew System::EventHandler(this, &Commande::label11_Click);
 			// 
 			// label12
 			// 
@@ -387,6 +398,7 @@ namespace G7interface {
 			this->label12->Size = System::Drawing::Size(188, 29);
 			this->label12->TabIndex = 18;
 			this->label12->Text = L"Référence article :";
+			this->label12->Click += gcnew System::EventHandler(this, &Commande::label12_Click);
 			// 
 			// label13
 			// 
@@ -396,11 +408,12 @@ namespace G7interface {
 			this->label13->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label13->ForeColor = System::Drawing::Color::White;
-			this->label13->Location = System::Drawing::Point(0, 219);
+			this->label13->Location = System::Drawing::Point(0, 213);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(316, 29);
 			this->label13->TabIndex = 19;
 			this->label13->Text = L" Date enregistrement du solde:";
+			this->label13->Click += gcnew System::EventHandler(this, &Commande::label13_Click);
 			// 
 			// textBox1
 			// 
@@ -572,48 +585,108 @@ namespace G7interface {
 
 		}
 #pragma endregion
+		//BOUTON AFFICHER
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   // BOUTON CREER
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   //BOUTON MODIFIER
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //BOUTON SUPPRIMER
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //BOUTON RETOUR
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();//Bouton retour
 }	   
+	   // TEXTBOX ID 
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // TEXTBOX REFERENCE COMMANDE
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // TEXTBOX DATE DE LIVRAISON
 private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // TEXTBOX DATE D'EMISSION
 private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // TEXTBOX DATE DE PAIEMENT
 private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // LISTBOX MOYEN DE PAIEMENT
 private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // TEXTBOX DATE D'ENREGISTREMENT DU SOLDE 
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // LISTBOX REFERENCE ARTICLE
 private: System::Void listBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // LISTBOX NOM ARTICLE
 private: System::Void listBox3_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // TEXTBOX QUANTITE
 private: System::Void textBox11_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // TEXTBOX MONTANT HT 
 private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // TEXTBOX MONTANT TVA
 private: System::Void textBox9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //TEXTBOX MONTANT TTC
 private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // DATAGRIDVIEW
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
+	   //TEXTBOX MESSAGE
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //BOUTON ENREGISTRER
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL ID 
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL REFERENCE COMMANDE
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL DATE DE LIVRAISON
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL DATE D'EMISSION
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL DATE DE PAIEMENT
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL MOYEN DE PAIEMENT
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL DATE D'ENREGISTREMENT DU SOLDE
+private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL REFERENCE ARTICLE
+private: System::Void label12_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL NOM ARTICLE
+private: System::Void label11_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL QUANTITE
+private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL MONTANT HT 
+private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // LABEL MONTANT TVA
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //LABEL MONTANT TTC
+private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

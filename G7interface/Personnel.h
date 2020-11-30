@@ -399,6 +399,7 @@ namespace G7interface {
 		   // DataGridView de personnel
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
+		   // Bouton RETOUR
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
