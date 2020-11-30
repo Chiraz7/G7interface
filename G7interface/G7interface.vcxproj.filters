@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Classes composantes">
+      <UniqueIdentifier>{0367bc67-e0cd-44ca-b4d5-a68de82159cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classe service">
+      <UniqueIdentifier>{d4ff02cd-3c90-4e6f-850f-51149ffe7e6e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
@@ -33,14 +39,14 @@
     <ClCompile Include="Statistiques.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CL_CAD.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="CL_map_TBPERSONNEL.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_CAD.cpp">
+      <Filter>Classes composantes</Filter>
     </ClCompile>
     <ClCompile Include="CL_Personnel.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Classe service</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -63,13 +69,13 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CL_CAD.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Classes composantes</Filter>
     </ClInclude>
     <ClInclude Include="CL_map_TBPERSONNEL.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Classes composantes</Filter>
     </ClInclude>
     <ClInclude Include="CL_Personnel.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Classe service</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
