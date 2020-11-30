@@ -184,6 +184,7 @@ namespace G7interface {
 			this->label1->Size = System::Drawing::Size(45, 29);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"ID :";
+			this->label1->Click += gcnew System::EventHandler(this, &Personnel::label1_Click);
 			// 
 			// label2
 			// 
@@ -198,6 +199,7 @@ namespace G7interface {
 			this->label2->Size = System::Drawing::Size(77, 29);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"Nom : ";
+			this->label2->Click += gcnew System::EventHandler(this, &Personnel::label2_Click);
 			// 
 			// label3
 			// 
@@ -212,6 +214,7 @@ namespace G7interface {
 			this->label3->Size = System::Drawing::Size(101, 29);
 			this->label3->TabIndex = 7;
 			this->label3->Text = L"Prénom :";
+			this->label3->Click += gcnew System::EventHandler(this, &Personnel::label3_Click);
 			// 
 			// dataGridView1
 			// 
@@ -249,6 +252,7 @@ namespace G7interface {
 			this->label4->Size = System::Drawing::Size(101, 29);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Adresse :";
+			this->label4->Click += gcnew System::EventHandler(this, &Personnel::label4_Click);
 			// 
 			// label5
 			// 
@@ -263,6 +267,7 @@ namespace G7interface {
 			this->label5->Size = System::Drawing::Size(73, 29);
 			this->label5->TabIndex = 11;
 			this->label5->Text = L"Ville : ";
+			this->label5->Click += gcnew System::EventHandler(this, &Personnel::label5_Click);
 			// 
 			// textBox1
 			// 
@@ -329,6 +334,7 @@ namespace G7interface {
 			this->label6->Size = System::Drawing::Size(203, 29);
 			this->label6->TabIndex = 18;
 			this->label6->Text = L"Date d\'embauche : ";
+			this->label6->Click += gcnew System::EventHandler(this, &Personnel::label6_Click);
 			// 
 			// textBox6
 			// 
@@ -375,37 +381,68 @@ namespace G7interface {
 
 		}
 #pragma endregion
+		//Bouton Afficher
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   //Bouton Créer
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   //Bouton Modifier
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   //Bouton Supprimer
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
 	private: System::Void Personnel_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   // DataGridView de personnel
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
+		   // Bouton ID
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   // Bouton Nom
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // Bouton Prénom
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // Bouton Adresse
 private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // Listbox Ville
 private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   // Bouton date d'embauche
 private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //Bouton message
 private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+	   //Bouton Enregistrer
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // Label ID 
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // Label Nom
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // Label Prénom
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // Label Adresse
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // Label Ville
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // Label date d'embauche
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 } 
