@@ -5,7 +5,7 @@ namespace NS_Composants
     CL_CAD::CL_CAD(void)
     {
         this->rq_sql = "RIEN";
-        this->cnx = "Data Source=DESKTOP-4VU7GUS;" + "Data Base= BDDProjetG4;" + "Integrated Security=SSPI";
+        this->cnx = "Data Source=DESKTOP-4VU7GUS;" + "Data Base= ProjetPOO;" + "Integrated Security=SSPI";
         this->CNX = gcnew SqlConnection(this->cnx);
         this->CMD = gcnew SqlCommand(this->rq_sql, this->CNX);
         this->CMD->CommandType = CommandType::Text;
@@ -37,7 +37,7 @@ namespace NS_Composants
         this->DA->Fill(this->DS, dataTableName);
         return this->DS;
     }
-    void CL_CAD::setSQL(String^)
+    void CL_CAD::setSQL(String^ rq_sql)
     {
         if (rq_sql == "" || rq_sql == "RIEN")
         {
