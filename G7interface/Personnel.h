@@ -34,6 +34,7 @@ namespace G7interface {
 				delete components;
 			}
 		}
+	private: String^ mode;
 	private: System::Windows::Forms::Button^ button1;
 	protected:
 	private: System::Windows::Forms::Button^ button2;
@@ -386,6 +387,17 @@ namespace G7interface {
 	}
 		   //Bouton Créer
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox1->Text="";//ID
+		this->textBox2->Text = "";//Nom
+		this->textBox3->Text = "";//Prénom
+		this->textBox4->Text = "";//Adresse
+		this->textBox5->Text = "Veuillez saisir les informations ";//Message
+		this->textBox6->Text = "";//Date d'embauche
+		this->dataGridView1->DataSource = nullptr;
+		this->dataGridView1->Columns->Add("Nom_P", "Nom_P");
+		this->dataGridView1->Columns->Add("Prnom_P", "Prenom_P");
+		this->dataGridView1->Columns->Add("DATE_D_Embauche", "DATE_D_Embauche");
+		this->mode = "Creer";
 	}
 		   //Bouton Modifier
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
