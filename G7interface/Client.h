@@ -52,11 +52,13 @@ namespace G7interface {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
+
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TextBox^ textBox7;
+
 	private: System::Windows::Forms::TextBox^ textBox8;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker2;
 
 	private:
 		/// <summary>
@@ -89,11 +91,11 @@ namespace G7interface {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -327,14 +329,6 @@ namespace G7interface {
 			this->textBox3->TabIndex = 16;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Client::textBox3_TextChanged);
 			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(764, 13);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(288, 26);
-			this->textBox4->TabIndex = 17;
-			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Client::textBox4_TextChanged);
-			// 
 			// textBox5
 			// 
 			this->textBox5->Location = System::Drawing::Point(764, 92);
@@ -355,14 +349,6 @@ namespace G7interface {
 			this->textBox6->TabIndex = 19;
 			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Client::textBox6_TextChanged);
 			// 
-			// textBox7
-			// 
-			this->textBox7->Location = System::Drawing::Point(764, 52);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(288, 26);
-			this->textBox7->TabIndex = 20;
-			this->textBox7->TextChanged += gcnew System::EventHandler(this, &Client::textBox7_TextChanged);
-			// 
 			// textBox8
 			// 
 			this->textBox8->Location = System::Drawing::Point(521, 420);
@@ -373,6 +359,22 @@ namespace G7interface {
 			this->textBox8->TabIndex = 21;
 			this->textBox8->TextChanged += gcnew System::EventHandler(this, &Client::textBox8_TextChanged);
 			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Location = System::Drawing::Point(764, 15);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(288, 26);
+			this->dateTimePicker1->TabIndex = 24;
+			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &Client::dateTimePicker1_ValueChanged);
+			// 
+			// dateTimePicker2
+			// 
+			this->dateTimePicker2->Location = System::Drawing::Point(764, 52);
+			this->dateTimePicker2->Name = L"dateTimePicker2";
+			this->dateTimePicker2->Size = System::Drawing::Size(288, 26);
+			this->dateTimePicker2->TabIndex = 25;
+			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &Client::dateTimePicker2_ValueChanged);
+			// 
 			// Client
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -380,11 +382,11 @@ namespace G7interface {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1064, 644);
+			this->Controls->Add(this->dateTimePicker2);
+			this->Controls->Add(this->dateTimePicker1);
 			this->Controls->Add(this->textBox8);
-			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
@@ -451,15 +453,11 @@ private: System::Void textBox3_TextChanged(System::Object^ sender, System::Event
 	   // LABEL DATE DE NAISSANCE
 private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-	   // TEXTBOX DATE DE NAISSANCE
-private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+	  
 	   // LABEL DATE DU PREMIER ACHAT
 private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-	   // TEXTBOX DATE DU PREMIER ACHAT
-private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+	 
 	   // LABEL ADRESSE DE LIVRAISON
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -480,6 +478,12 @@ private: System::Void textBox8_TextChanged(System::Object^ sender, System::Event
 }
 	   //BOUTON ENREGISTRER
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   // Date de naissance
+private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Date du premier achat
+private: System::Void dateTimePicker2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

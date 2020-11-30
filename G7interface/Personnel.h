@@ -55,7 +55,8 @@ namespace G7interface {
 	private: System::Windows::Forms::ListBox^ listBox1;
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+
 
 	private:
 		/// <summary>
@@ -90,7 +91,7 @@ namespace G7interface {
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -337,13 +338,13 @@ namespace G7interface {
 			this->label6->Text = L"Date d\'embauche : ";
 			this->label6->Click += gcnew System::EventHandler(this, &Personnel::label6_Click);
 			// 
-			// textBox6
+			// dateTimePicker1
 			// 
-			this->textBox6->Location = System::Drawing::Point(724, 149);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(376, 26);
-			this->textBox6->TabIndex = 19;
-			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox6_TextChanged);
+			this->dateTimePicker1->Location = System::Drawing::Point(724, 148);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(376, 26);
+			this->dateTimePicker1->TabIndex = 20;
+			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &Personnel::dateTimePicker1_ValueChanged);
 			// 
 			// Personnel
 			// 
@@ -352,7 +353,7 @@ namespace G7interface {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1112, 667);
-			this->Controls->Add(this->textBox6);
+			this->Controls->Add(this->dateTimePicker1);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->listBox1);
@@ -392,7 +393,7 @@ namespace G7interface {
 		this->textBox3->Text = "";//Prénom
 		this->textBox4->Text = "";//Adresse
 		this->textBox5->Text = "Veuillez saisir les informations ";//Message
-		this->textBox6->Text = "";//Date d'embauche
+		this->dateTimePicker1->Text = "";//Date d'embauche
 		this->dataGridView1->DataSource = nullptr;
 		this->dataGridView1->Columns->Add("Nom_P", "Nom_P");
 		this->dataGridView1->Columns->Add("Prnom_P", "Prenom_P");
@@ -430,9 +431,7 @@ private: System::Void textBox4_TextChanged(System::Object^ sender, System::Event
 	   // Listbox Ville
 private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-	   // Bouton date d'embauche
-private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+
 	   //Bouton message
 private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -456,6 +455,8 @@ private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e)
 }
 	   // Label date d'embauche
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 } 
