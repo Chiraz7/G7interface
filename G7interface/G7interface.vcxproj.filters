@@ -24,9 +24,6 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Personnel.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Client.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -48,12 +45,12 @@
     <ClCompile Include="CL_Personnel.cpp">
       <Filter>Classe service</Filter>
     </ClCompile>
+    <ClCompile Include="FormePersonnel.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Personnel.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Client.h">
@@ -76,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="CL_Personnel.h">
       <Filter>Classe service</Filter>
+    </ClInclude>
+    <ClInclude Include="FormePersonnel.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

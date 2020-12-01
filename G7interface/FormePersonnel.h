@@ -10,12 +10,12 @@ namespace G7interface {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de Personnel
+	/// Description résumée de FormePersonnel
 	/// </summary>
-	public ref class Personnel : public System::Windows::Forms::Form
+	public ref class FormePersonnel : public System::Windows::Forms::Form
 	{
 	public:
-		Personnel(void)
+		FormePersonnel(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace G7interface {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~Personnel()
+		~FormePersonnel()
 		{
 			if (components)
 			{
@@ -71,7 +71,7 @@ namespace G7interface {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Personnel::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FormePersonnel::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -110,7 +110,7 @@ namespace G7interface {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Afficher";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Personnel::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &FormePersonnel::button1_Click);
 			// 
 			// button2
 			// 
@@ -125,7 +125,7 @@ namespace G7interface {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Créer";
 			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &Personnel::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &FormePersonnel::button2_Click);
 			// 
 			// button3
 			// 
@@ -140,7 +140,7 @@ namespace G7interface {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Modifier";
 			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &Personnel::button3_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &FormePersonnel::button3_Click);
 			// 
 			// button4
 			// 
@@ -155,7 +155,7 @@ namespace G7interface {
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Supprimer";
 			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &Personnel::button4_Click);
+			this->button4->Click += gcnew System::EventHandler(this, &FormePersonnel::button4_Click);
 			// 
 			// button5
 			// 
@@ -171,7 +171,7 @@ namespace G7interface {
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"Enregistrer";
 			this->button5->UseVisualStyleBackColor = false;
-			this->button5->Click += gcnew System::EventHandler(this, &Personnel::button5_Click);
+			this->button5->Click += gcnew System::EventHandler(this, &FormePersonnel::button5_Click);
 			// 
 			// label1
 			// 
@@ -186,7 +186,7 @@ namespace G7interface {
 			this->label1->Size = System::Drawing::Size(45, 29);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"ID :";
-			this->label1->Click += gcnew System::EventHandler(this, &Personnel::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &FormePersonnel::label1_Click);
 			// 
 			// label2
 			// 
@@ -201,7 +201,7 @@ namespace G7interface {
 			this->label2->Size = System::Drawing::Size(77, 29);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"Nom : ";
-			this->label2->Click += gcnew System::EventHandler(this, &Personnel::label2_Click);
+			this->label2->Click += gcnew System::EventHandler(this, &FormePersonnel::label2_Click);
 			// 
 			// label3
 			// 
@@ -216,7 +216,7 @@ namespace G7interface {
 			this->label3->Size = System::Drawing::Size(101, 29);
 			this->label3->TabIndex = 7;
 			this->label3->Text = L"Prénom :";
-			this->label3->Click += gcnew System::EventHandler(this, &Personnel::label3_Click);
+			this->label3->Click += gcnew System::EventHandler(this, &FormePersonnel::label3_Click);
 			// 
 			// dataGridView1
 			// 
@@ -228,7 +228,7 @@ namespace G7interface {
 			this->dataGridView1->RowTemplate->Height = 28;
 			this->dataGridView1->Size = System::Drawing::Size(571, 312);
 			this->dataGridView1->TabIndex = 8;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Personnel::dataGridView1_CellContentClick);
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FormePersonnel::dataGridView1_CellContentClick);
 			// 
 			// button6
 			// 
@@ -239,7 +239,7 @@ namespace G7interface {
 			this->button6->Size = System::Drawing::Size(54, 50);
 			this->button6->TabIndex = 9;
 			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &Personnel::button6_Click);
+			this->button6->Click += gcnew System::EventHandler(this, &FormePersonnel::button6_Click);
 			// 
 			// label4
 			// 
@@ -254,7 +254,7 @@ namespace G7interface {
 			this->label4->Size = System::Drawing::Size(101, 29);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Adresse :";
-			this->label4->Click += gcnew System::EventHandler(this, &Personnel::label4_Click);
+			this->label4->Click += gcnew System::EventHandler(this, &FormePersonnel::label4_Click);
 			// 
 			// label5
 			// 
@@ -269,7 +269,7 @@ namespace G7interface {
 			this->label5->Size = System::Drawing::Size(73, 29);
 			this->label5->TabIndex = 11;
 			this->label5->Text = L"Ville : ";
-			this->label5->Click += gcnew System::EventHandler(this, &Personnel::label5_Click);
+			this->label5->Click += gcnew System::EventHandler(this, &FormePersonnel::label5_Click);
 			// 
 			// textBox1
 			// 
@@ -277,7 +277,7 @@ namespace G7interface {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(240, 26);
 			this->textBox1->TabIndex = 12;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox1_TextChanged);
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -285,7 +285,7 @@ namespace G7interface {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(240, 26);
 			this->textBox2->TabIndex = 13;
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox2_TextChanged);
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
@@ -293,7 +293,7 @@ namespace G7interface {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(240, 26);
 			this->textBox3->TabIndex = 14;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox3_TextChanged);
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
@@ -301,7 +301,7 @@ namespace G7interface {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(376, 26);
 			this->textBox4->TabIndex = 15;
-			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox4_TextChanged);
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox4_TextChanged);
 			// 
 			// listBox1
 			// 
@@ -311,7 +311,7 @@ namespace G7interface {
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(376, 84);
 			this->listBox1->TabIndex = 16;
-			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Personnel::listBox1_SelectedIndexChanged);
+			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &FormePersonnel::listBox1_SelectedIndexChanged);
 			// 
 			// textBox5
 			// 
@@ -321,7 +321,7 @@ namespace G7interface {
 			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox5->Size = System::Drawing::Size(571, 147);
 			this->textBox5->TabIndex = 17;
-			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox5_TextChanged);
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox5_TextChanged);
 			// 
 			// label6
 			// 
@@ -336,7 +336,7 @@ namespace G7interface {
 			this->label6->Size = System::Drawing::Size(203, 29);
 			this->label6->TabIndex = 18;
 			this->label6->Text = L"Date d\'embauche : ";
-			this->label6->Click += gcnew System::EventHandler(this, &Personnel::label6_Click);
+			this->label6->Click += gcnew System::EventHandler(this, &FormePersonnel::label6_Click);
 			// 
 			// dateTimePicker1
 			// 
@@ -344,9 +344,9 @@ namespace G7interface {
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(376, 26);
 			this->dateTimePicker1->TabIndex = 20;
-			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &Personnel::dateTimePicker1_ValueChanged);
+			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &FormePersonnel::dateTimePicker1_ValueChanged);
 			// 
-			// Personnel
+			// FormePersonnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -374,9 +374,9 @@ namespace G7interface {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->DoubleBuffered = true;
-			this->Name = L"Personnel";
-			this->Text = L"Personnel";
-			this->Load += gcnew System::EventHandler(this, &Personnel::Personnel_Load);
+			this->Name = L"FormePersonnel";
+			this->Text = L"FormePersonnel";
+			this->Load += gcnew System::EventHandler(this, &FormePersonnel::FormePersonnel_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -407,7 +407,7 @@ namespace G7interface {
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-	private: System::Void Personnel_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void FormePersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 		   // DataGridView de personnel
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {

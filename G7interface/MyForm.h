@@ -2,7 +2,7 @@
 #include "Stock.h"  
 #include "Commande.h"
 #include "Client.h"
-#include "Personnel.h"
+#include "FormePersonnel.h"
 #include "Statistiques.h" 
 
 
@@ -186,7 +186,7 @@ namespace G7interface {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Bouton personnel
-		Personnel^ pe = gcnew Personnel;
+		FormePersonnel^ pe = gcnew FormePersonnel;
 		this->Hide();
 		G7interface::Commande monFormulaire1;
 		pe->ShowDialog();
