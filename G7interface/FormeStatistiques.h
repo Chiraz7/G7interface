@@ -10,12 +10,12 @@ namespace G7interface {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de Statistiques
+	/// Description résumée de FormeStatistiques
 	/// </summary>
-	public ref class Statistiques : public System::Windows::Forms::Form
+	public ref class FormeStatistiques : public System::Windows::Forms::Form
 	{
 	public:
-		Statistiques(void)
+		FormeStatistiques(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace G7interface {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~Statistiques()
+		~FormeStatistiques()
 		{
 			if (components)
 			{
@@ -48,10 +48,10 @@ namespace G7interface {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Statistiques::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FormeStatistiques::typeid));
 			this->SuspendLayout();
 			// 
-			// Statistiques
+			// FormeStatistiques
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -59,8 +59,8 @@ namespace G7interface {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1196, 626);
 			this->DoubleBuffered = true;
-			this->Name = L"Statistiques";
-			this->Text = L"Statistiques";
+			this->Name = L"FormeStatistiques";
+			this->Text = L"FormeStatistiques";
 			this->ResumeLayout(false);
 
 		}

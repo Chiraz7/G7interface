@@ -24,28 +24,31 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Client.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Commande.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Stock.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Statistiques.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_map_TBPERSONNEL.cpp">
-      <Filter>Classes composantes</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_CAD.cpp">
-      <Filter>Classes composantes</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Personnel.cpp">
-      <Filter>Classe service</Filter>
-    </ClCompile>
     <ClCompile Include="FormePersonnel.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Adresse.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="Article.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="CAD.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="Choisir.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="FormeClient.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="FormeCommande.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="FormeStatistiques.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="FormeStock.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,28 +56,31 @@
     <ClInclude Include="MyForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Client.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Commande.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Stock.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Statistiques.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_CAD.h">
-      <Filter>Classes composantes</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_map_TBPERSONNEL.h">
-      <Filter>Classes composantes</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_Personnel.h">
-      <Filter>Classe service</Filter>
-    </ClInclude>
     <ClInclude Include="FormePersonnel.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Adresse.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="Article.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="CAD.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="Choisir.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="FormeClient.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="FormeCommande.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="FormeStatistiques.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="FormeStock.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

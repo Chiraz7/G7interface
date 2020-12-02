@@ -120,23 +120,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Client.cpp" />
-    <ClCompile Include="CL_CAD.cpp" />
-    <ClCompile Include="CL_Personnel.cpp" />
-    <ClCompile Include="Commande.cpp" />
+    <ClCompile Include="Adresse.cpp" />
+    <ClCompile Include="Article.cpp" />
+    <ClCompile Include="CAD.cpp" />
+    <ClCompile Include="Choisir.cpp" />
+    <ClCompile Include="FormeClient.cpp" />
+    <ClCompile Include="FormeCommande.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="FormePersonnel.cpp" />
-    <ClCompile Include="Statistiques.cpp" />
-    <ClCompile Include="Stock.cpp" />
-    <ClCompile Include="CL_map_TBPERSONNEL.cpp" />
+    <ClCompile Include="FormeStatistiques.cpp" />
+    <ClCompile Include="FormeStock.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Client.h">
+    <ClInclude Include="Adresse.h" />
+    <ClInclude Include="Article.h" />
+    <ClInclude Include="CAD.h" />
+    <ClInclude Include="Choisir.h" />
+    <ClInclude Include="FormeClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="CL_CAD.h" />
-    <ClInclude Include="CL_Personnel.h" />
-    <ClInclude Include="Commande.h">
+    <ClInclude Include="FormeCommande.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm.h">
@@ -145,20 +148,19 @@
     <ClInclude Include="FormePersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Statistiques.h">
+    <ClInclude Include="FormeStatistiques.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Stock.h">
+    <ClInclude Include="FormeStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="CL_map_TBPERSONNEL.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Client.resx">
-      <DependentUpon>Client.h</DependentUpon>
+    <EmbeddedResource Include="FormeClient.resx">
+      <DependentUpon>FormeClient.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Commande.resx">
-      <DependentUpon>Commande.h</DependentUpon>
+    <EmbeddedResource Include="FormeCommande.resx">
+      <DependentUpon>FormeCommande.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
@@ -166,11 +168,11 @@
     <EmbeddedResource Include="FormePersonnel.resx">
       <DependentUpon>FormePersonnel.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statistiques.resx">
-      <DependentUpon>Statistiques.h</DependentUpon>
+    <EmbeddedResource Include="FormeStatistiques.resx">
+      <DependentUpon>FormeStatistiques.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock.resx">
-      <DependentUpon>Stock.h</DependentUpon>
+    <EmbeddedResource Include="FormeStock.resx">
+      <DependentUpon>FormeStock.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

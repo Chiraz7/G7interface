@@ -10,12 +10,12 @@ namespace G7interface {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de Commande
+	/// Description résumée de FormeCommande
 	/// </summary>
-	public ref class Commande : public System::Windows::Forms::Form
+	public ref class FormeCommande : public System::Windows::Forms::Form
 	{
 	public:
-		Commande(void)
+		FormeCommande(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace G7interface {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~Commande()
+		~FormeCommande()
 		{
 			if (components)
 			{
@@ -87,7 +87,7 @@ namespace G7interface {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Commande::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FormeCommande::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -138,7 +138,7 @@ namespace G7interface {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Afficher";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Commande::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &FormeCommande::button1_Click);
 			// 
 			// button2
 			// 
@@ -153,7 +153,7 @@ namespace G7interface {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Créer";
 			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &Commande::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &FormeCommande::button2_Click);
 			// 
 			// button3
 			// 
@@ -168,7 +168,7 @@ namespace G7interface {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Modifier";
 			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &Commande::button3_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &FormeCommande::button3_Click);
 			// 
 			// button4
 			// 
@@ -183,7 +183,7 @@ namespace G7interface {
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Supprimer";
 			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &Commande::button4_Click);
+			this->button4->Click += gcnew System::EventHandler(this, &FormeCommande::button4_Click);
 			// 
 			// label1
 			// 
@@ -198,7 +198,7 @@ namespace G7interface {
 			this->label1->Size = System::Drawing::Size(50, 29);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"ID : ";
-			this->label1->Click += gcnew System::EventHandler(this, &Commande::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &FormeCommande::label1_Click);
 			// 
 			// label2
 			// 
@@ -213,7 +213,7 @@ namespace G7interface {
 			this->label2->Size = System::Drawing::Size(238, 29);
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"Référence commande :";
-			this->label2->Click += gcnew System::EventHandler(this, &Commande::label2_Click);
+			this->label2->Click += gcnew System::EventHandler(this, &FormeCommande::label2_Click);
 			// 
 			// label3
 			// 
@@ -228,7 +228,7 @@ namespace G7interface {
 			this->label3->Size = System::Drawing::Size(190, 29);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"Date de livraison :";
-			this->label3->Click += gcnew System::EventHandler(this, &Commande::label3_Click);
+			this->label3->Click += gcnew System::EventHandler(this, &FormeCommande::label3_Click);
 			// 
 			// dataGridView1
 			// 
@@ -240,7 +240,7 @@ namespace G7interface {
 			this->dataGridView1->RowTemplate->Height = 28;
 			this->dataGridView1->Size = System::Drawing::Size(550, 255);
 			this->dataGridView1->TabIndex = 7;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Commande::dataGridView1_CellContentClick);
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FormeCommande::dataGridView1_CellContentClick);
 			// 
 			// button5
 			// 
@@ -256,7 +256,7 @@ namespace G7interface {
 			this->button5->TabIndex = 8;
 			this->button5->Text = L"Enregistrer";
 			this->button5->UseVisualStyleBackColor = false;
-			this->button5->Click += gcnew System::EventHandler(this, &Commande::button5_Click);
+			this->button5->Click += gcnew System::EventHandler(this, &FormeCommande::button5_Click);
 			// 
 			// button6
 			// 
@@ -267,7 +267,7 @@ namespace G7interface {
 			this->button6->Size = System::Drawing::Size(51, 48);
 			this->button6->TabIndex = 9;
 			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &Commande::button6_Click);
+			this->button6->Click += gcnew System::EventHandler(this, &FormeCommande::button6_Click);
 			// 
 			// label4
 			// 
@@ -282,7 +282,7 @@ namespace G7interface {
 			this->label4->Size = System::Drawing::Size(181, 29);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Date d\'émission :";
-			this->label4->Click += gcnew System::EventHandler(this, &Commande::label4_Click);
+			this->label4->Click += gcnew System::EventHandler(this, &FormeCommande::label4_Click);
 			// 
 			// label5
 			// 
@@ -297,7 +297,7 @@ namespace G7interface {
 			this->label5->Size = System::Drawing::Size(201, 29);
 			this->label5->TabIndex = 11;
 			this->label5->Text = L"Date de paiement :";
-			this->label5->Click += gcnew System::EventHandler(this, &Commande::label5_Click);
+			this->label5->Click += gcnew System::EventHandler(this, &FormeCommande::label5_Click);
 			// 
 			// label6
 			// 
@@ -312,7 +312,7 @@ namespace G7interface {
 			this->label6->Size = System::Drawing::Size(224, 29);
 			this->label6->TabIndex = 12;
 			this->label6->Text = L"Moyen de paiement :";
-			this->label6->Click += gcnew System::EventHandler(this, &Commande::label6_Click);
+			this->label6->Click += gcnew System::EventHandler(this, &FormeCommande::label6_Click);
 			// 
 			// label7
 			// 
@@ -327,7 +327,7 @@ namespace G7interface {
 			this->label7->Size = System::Drawing::Size(154, 29);
 			this->label7->TabIndex = 13;
 			this->label7->Text = L"Montant TTC :";
-			this->label7->Click += gcnew System::EventHandler(this, &Commande::label7_Click);
+			this->label7->Click += gcnew System::EventHandler(this, &FormeCommande::label7_Click);
 			// 
 			// label8
 			// 
@@ -342,7 +342,7 @@ namespace G7interface {
 			this->label8->Size = System::Drawing::Size(156, 29);
 			this->label8->TabIndex = 14;
 			this->label8->Text = L"Montant TVA :";
-			this->label8->Click += gcnew System::EventHandler(this, &Commande::label8_Click);
+			this->label8->Click += gcnew System::EventHandler(this, &FormeCommande::label8_Click);
 			// 
 			// label9
 			// 
@@ -357,7 +357,7 @@ namespace G7interface {
 			this->label9->Size = System::Drawing::Size(144, 29);
 			this->label9->TabIndex = 15;
 			this->label9->Text = L"Montant HT :";
-			this->label9->Click += gcnew System::EventHandler(this, &Commande::label9_Click);
+			this->label9->Click += gcnew System::EventHandler(this, &FormeCommande::label9_Click);
 			// 
 			// label10
 			// 
@@ -372,7 +372,7 @@ namespace G7interface {
 			this->label10->Size = System::Drawing::Size(111, 29);
 			this->label10->TabIndex = 16;
 			this->label10->Text = L"Quantité :";
-			this->label10->Click += gcnew System::EventHandler(this, &Commande::label10_Click);
+			this->label10->Click += gcnew System::EventHandler(this, &FormeCommande::label10_Click);
 			// 
 			// label11
 			// 
@@ -387,7 +387,7 @@ namespace G7interface {
 			this->label11->Size = System::Drawing::Size(133, 29);
 			this->label11->TabIndex = 17;
 			this->label11->Text = L"Nom article:";
-			this->label11->Click += gcnew System::EventHandler(this, &Commande::label11_Click);
+			this->label11->Click += gcnew System::EventHandler(this, &FormeCommande::label11_Click);
 			// 
 			// label12
 			// 
@@ -402,7 +402,7 @@ namespace G7interface {
 			this->label12->Size = System::Drawing::Size(188, 29);
 			this->label12->TabIndex = 18;
 			this->label12->Text = L"Référence article :";
-			this->label12->Click += gcnew System::EventHandler(this, &Commande::label12_Click);
+			this->label12->Click += gcnew System::EventHandler(this, &FormeCommande::label12_Click);
 			// 
 			// label13
 			// 
@@ -417,7 +417,7 @@ namespace G7interface {
 			this->label13->Size = System::Drawing::Size(316, 29);
 			this->label13->TabIndex = 19;
 			this->label13->Text = L" Date enregistrement du solde:";
-			this->label13->Click += gcnew System::EventHandler(this, &Commande::label13_Click);
+			this->label13->Click += gcnew System::EventHandler(this, &FormeCommande::label13_Click);
 			// 
 			// textBox1
 			// 
@@ -427,7 +427,7 @@ namespace G7interface {
 			this->textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox1->Size = System::Drawing::Size(550, 101);
 			this->textBox1->TabIndex = 20;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Commande::textBox1_TextChanged);
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -435,7 +435,7 @@ namespace G7interface {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(182, 26);
 			this->textBox2->TabIndex = 21;
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Commande::textBox2_TextChanged);
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
@@ -443,7 +443,7 @@ namespace G7interface {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(182, 26);
 			this->textBox3->TabIndex = 22;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Commande::textBox3_TextChanged);
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox3_TextChanged);
 			// 
 			// listBox1
 			// 
@@ -453,7 +453,7 @@ namespace G7interface {
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(182, 44);
 			this->listBox1->TabIndex = 26;
-			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Commande::listBox1_SelectedIndexChanged);
+			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &FormeCommande::listBox1_SelectedIndexChanged);
 			// 
 			// listBox2
 			// 
@@ -463,7 +463,7 @@ namespace G7interface {
 			this->listBox2->Name = L"listBox2";
 			this->listBox2->Size = System::Drawing::Size(343, 44);
 			this->listBox2->TabIndex = 28;
-			this->listBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &Commande::listBox2_SelectedIndexChanged);
+			this->listBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &FormeCommande::listBox2_SelectedIndexChanged);
 			// 
 			// listBox3
 			// 
@@ -473,7 +473,7 @@ namespace G7interface {
 			this->listBox3->Name = L"listBox3";
 			this->listBox3->Size = System::Drawing::Size(343, 44);
 			this->listBox3->TabIndex = 29;
-			this->listBox3->SelectedIndexChanged += gcnew System::EventHandler(this, &Commande::listBox3_SelectedIndexChanged);
+			this->listBox3->SelectedIndexChanged += gcnew System::EventHandler(this, &FormeCommande::listBox3_SelectedIndexChanged);
 			// 
 			// textBox8
 			// 
@@ -481,7 +481,7 @@ namespace G7interface {
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(343, 26);
 			this->textBox8->TabIndex = 30;
-			this->textBox8->TextChanged += gcnew System::EventHandler(this, &Commande::textBox8_TextChanged);
+			this->textBox8->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox8_TextChanged);
 			// 
 			// textBox9
 			// 
@@ -489,7 +489,7 @@ namespace G7interface {
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(343, 26);
 			this->textBox9->TabIndex = 31;
-			this->textBox9->TextChanged += gcnew System::EventHandler(this, &Commande::textBox9_TextChanged);
+			this->textBox9->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox9_TextChanged);
 			// 
 			// textBox10
 			// 
@@ -497,7 +497,7 @@ namespace G7interface {
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(343, 26);
 			this->textBox10->TabIndex = 32;
-			this->textBox10->TextChanged += gcnew System::EventHandler(this, &Commande::textBox10_TextChanged);
+			this->textBox10->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox10_TextChanged);
 			// 
 			// textBox11
 			// 
@@ -505,7 +505,7 @@ namespace G7interface {
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(343, 26);
 			this->textBox11->TabIndex = 33;
-			this->textBox11->TextChanged += gcnew System::EventHandler(this, &Commande::textBox11_TextChanged);
+			this->textBox11->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox11_TextChanged);
 			// 
 			// dateTimePicker1
 			// 
@@ -513,7 +513,7 @@ namespace G7interface {
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(182, 26);
 			this->dateTimePicker1->TabIndex = 34;
-			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &Commande::dateTimePicker1_ValueChanged);
+			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &FormeCommande::dateTimePicker1_ValueChanged);
 			// 
 			// dateTimePicker2
 			// 
@@ -521,7 +521,7 @@ namespace G7interface {
 			this->dateTimePicker2->Name = L"dateTimePicker2";
 			this->dateTimePicker2->Size = System::Drawing::Size(182, 26);
 			this->dateTimePicker2->TabIndex = 35;
-			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &Commande::dateTimePicker2_ValueChanged);
+			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &FormeCommande::dateTimePicker2_ValueChanged);
 			// 
 			// dateTimePicker3
 			// 
@@ -529,7 +529,7 @@ namespace G7interface {
 			this->dateTimePicker3->Name = L"dateTimePicker3";
 			this->dateTimePicker3->Size = System::Drawing::Size(182, 26);
 			this->dateTimePicker3->TabIndex = 36;
-			this->dateTimePicker3->ValueChanged += gcnew System::EventHandler(this, &Commande::dateTimePicker3_ValueChanged);
+			this->dateTimePicker3->ValueChanged += gcnew System::EventHandler(this, &FormeCommande::dateTimePicker3_ValueChanged);
 			// 
 			// dateTimePicker4
 			// 
@@ -537,9 +537,9 @@ namespace G7interface {
 			this->dateTimePicker4->Name = L"dateTimePicker4";
 			this->dateTimePicker4->Size = System::Drawing::Size(182, 26);
 			this->dateTimePicker4->TabIndex = 37;
-			this->dateTimePicker4->ValueChanged += gcnew System::EventHandler(this, &Commande::dateTimePicker4_ValueChanged);
+			this->dateTimePicker4->ValueChanged += gcnew System::EventHandler(this, &FormeCommande::dateTimePicker4_ValueChanged);
 			// 
-			// Commande
+			// FormeCommande
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -581,8 +581,8 @@ namespace G7interface {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->DoubleBuffered = true;
-			this->Name = L"Commande";
-			this->Text = L"Commande";
+			this->Name = L"FormeCommande";
+			this->Text = L"FormeCommande";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();

@@ -1,9 +1,9 @@
 #pragma once
-#include "Stock.h"  
-#include "Commande.h"
-#include "Client.h"
+#include "FormeStock.h"  
+#include "FormeCommande.h"
+#include "FormeClient.h"
 #include "FormePersonnel.h"
-#include "Statistiques.h" 
+#include "FormeStatistiques.h" 
 
 
 namespace G7interface {
@@ -188,37 +188,37 @@ namespace G7interface {
 		//Bouton personnel
 		FormePersonnel^ pe = gcnew FormePersonnel;
 		this->Hide();
-		G7interface::Commande monFormulaire1;
+		G7interface::FormeCommande monFormulaire1;
 		pe->ShowDialog();
 		this->Show();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		Client^ c = gcnew Client;
+		FormeClient^ c = gcnew FormeClient;
 		this->Hide();
-		G7interface::Commande monFormulaire1;
+		G7interface::FormeCommande monFormulaire1;
 		c->ShowDialog();
 		this->Show();
 	}
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Bouton commande
-	Commande^ co = gcnew Commande;
+	FormeCommande^ co = gcnew FormeCommande;
 	this->Hide();
-	G7interface::Commande monFormulaire1;
+	G7interface::FormeCommande monFormulaire1;
 	co->ShowDialog();
 	this->Show();
 
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Bouton stock
-	Stock^ s = gcnew Stock;
+	FormeStock^ s = gcnew FormeStock;
 	this->Hide();
-	G7interface::Commande monFormulaire1;
+	G7interface::FormeCommande monFormulaire1;
 	s->ShowDialog();
 	this->Show();
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Bouton statistiques
-	Statistiques^ stat = gcnew Statistiques;
+	FormeStatistiques^ stat = gcnew FormeStatistiques;
 	this->Hide();
 	stat->Show();
 }
