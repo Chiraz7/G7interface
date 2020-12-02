@@ -124,18 +124,27 @@
     <ClCompile Include="Article.cpp" />
     <ClCompile Include="CAD.cpp" />
     <ClCompile Include="Choisir.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Commande.cpp" />
     <ClCompile Include="FormeClient.cpp" />
     <ClCompile Include="FormeCommande.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="FormePersonnel.cpp" />
     <ClCompile Include="FormeStatistiques.cpp" />
     <ClCompile Include="FormeStock.cpp" />
+    <ClCompile Include="Paiement.cpp" />
+    <ClCompile Include="Personne.cpp" />
+    <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="Ville.cpp" />
+    <ClCompile Include="Vivre.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Adresse.h" />
     <ClInclude Include="Article.h" />
     <ClInclude Include="CAD.h" />
     <ClInclude Include="Choisir.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Commande.h" />
     <ClInclude Include="FormeClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -154,6 +163,11 @@
     <ClInclude Include="FormeStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Paiement.h" />
+    <ClInclude Include="Personne.h" />
+    <ClInclude Include="Personnel.h" />
+    <ClInclude Include="Ville.h" />
+    <ClInclude Include="Vivre.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormeClient.resx">

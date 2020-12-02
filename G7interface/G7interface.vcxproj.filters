@@ -51,6 +51,27 @@
     <ClCompile Include="FormeStock.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="Commande.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="Paiement.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="Personne.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="Ville.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="Personnel.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="Vivre.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -82,6 +103,27 @@
     </ClInclude>
     <ClInclude Include="FormeStock.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Paiement.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="Personne.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="Ville.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="Vivre.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="Commande.h">
+      <Filter>Classes composantes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
