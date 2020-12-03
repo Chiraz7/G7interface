@@ -1,5 +1,5 @@
 ﻿#pragma once
-
+#include"SVC_Gemploye.h"
 namespace G7interface {
 
 	using namespace System;
@@ -8,6 +8,8 @@ namespace G7interface {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace Composant;
+	using namespace Service;
 
 	/// <summary>
 	/// Description résumée de FormePersonnel
@@ -34,6 +36,7 @@ namespace G7interface {
 				delete components;
 			}
 		}
+	private: SVC_Gemploye^ gestionpersonnel= gcnew SVC_Gemploye();
 	private: String^ mode;
 	private: System::Windows::Forms::Button^ button1;
 	protected:
@@ -384,8 +387,8 @@ namespace G7interface {
 		}
 #pragma endregion
 		//Bouton Afficher
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+	
 		   //Bouton Créer
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->textBox1->Text="";//ID
@@ -401,17 +404,13 @@ namespace G7interface {
 		this->mode = "Creer";
 	}
 		   //Bouton Modifier
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 		   //Bouton Supprimer
-	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
 
-	private: System::Void FormePersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
+	private: System::Void FormePersonnel_Load(System::Object^ sender, System::EventArgs^ e);
 		   // DataGridView de personnel
-	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	}
+	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
 		   // Bouton RETOUR
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();

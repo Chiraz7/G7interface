@@ -72,6 +72,12 @@
     <ClCompile Include="Vivre.cpp">
       <Filter>Classes composantes</Filter>
     </ClCompile>
+    <ClCompile Include="SVC_Gemploye.cpp">
+      <Filter>Classe service</Filter>
+    </ClCompile>
+    <ClCompile Include="SVC_Gstock.cpp">
+      <Filter>Classe service</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -124,6 +130,12 @@
     </ClInclude>
     <ClInclude Include="Commande.h">
       <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gemploye.h">
+      <Filter>Classe service</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gstock.h">
+      <Filter>Classe service</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
