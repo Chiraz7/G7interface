@@ -132,9 +132,11 @@
     <ClCompile Include="FormePersonnel.cpp" />
     <ClCompile Include="FormeStatistiques.cpp" />
     <ClCompile Include="FormeStock.cpp" />
+    <ClCompile Include="FicheAdresse.cpp" />
     <ClCompile Include="Paiement.cpp" />
     <ClCompile Include="Personne.cpp" />
     <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="SVC_Gclient.cpp" />
     <ClCompile Include="SVC_Gemploye.cpp" />
     <ClCompile Include="SVC_Gstock.cpp" />
     <ClCompile Include="Ville.cpp" />
@@ -165,9 +167,13 @@
     <ClInclude Include="FormeStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FicheAdresse.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Paiement.h" />
     <ClInclude Include="Personne.h" />
     <ClInclude Include="Personnel.h" />
+    <ClInclude Include="SVC_Gclient.h" />
     <ClInclude Include="SVC_Gemploye.h" />
     <ClInclude Include="SVC_Gstock.h" />
     <ClInclude Include="Ville.h" />
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormeStock.resx">
       <DependentUpon>FormeStock.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FicheAdresse.resx">
+      <DependentUpon>FicheAdresse.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
