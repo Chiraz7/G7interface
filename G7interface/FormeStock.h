@@ -1,5 +1,7 @@
 #pragma once
-
+#include"SVC_Gstock.h"
+using namespace Composant;
+using namespace Service;
 namespace G7interface {
 
 	using namespace System;
@@ -51,17 +53,27 @@ namespace G7interface {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::TextBox^ textBox_ID;
+	private: System::Windows::Forms::TextBox^ textBox_prenom;
 
+
+
+	private: System::Windows::Forms::TextBox^ textBox_nom;
+	private: System::Windows::Forms::TextBox^ textBox_quantite;
+
+
+	private: System::Windows::Forms::TextBox^ textBox_couleur;
+
+	private: System::Windows::Forms::TextBox^ textBox_ref;
+	private: System::Windows::Forms::TextBox^ textBox_prixTTC;
+
+
+	private: System::Windows::Forms::TextBox^ textBox_PrixTVA;
+
+	private: System::Windows::Forms::TextBox^ textBox_prixHT;
+
+	private: System::Windows::Forms::TextBox^ textBox10;
+	private: SVC_Gstock^ gestionstock = gcnew SVC_Gstock();
 	private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
@@ -92,15 +104,15 @@ namespace G7interface {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_ID = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_prenom = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_nom = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_quantite = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_couleur = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_ref = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_prixTTC = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_PrixTVA = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_prixHT = (gcnew System::Windows::Forms::TextBox());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
@@ -341,77 +353,77 @@ namespace G7interface {
 			this->label9->Text = L"Prix HT : ";
 			this->label9->Click += gcnew System::EventHandler(this, &FormeStock::label9_Click);
 			// 
-			// textBox1
+			// textBox_ID
 			// 
-			this->textBox1->Location = System::Drawing::Point(207, 22);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(150, 26);
-			this->textBox1->TabIndex = 16;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox1_TextChanged);
+			this->textBox_ID->Location = System::Drawing::Point(207, 22);
+			this->textBox_ID->Name = L"textBox_ID";
+			this->textBox_ID->Size = System::Drawing::Size(150, 26);
+			this->textBox_ID->TabIndex = 16;
+			this->textBox_ID->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox1_TextChanged);
 			// 
-			// textBox2
+			// textBox_prenom
 			// 
-			this->textBox2->Location = System::Drawing::Point(207, 91);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(150, 26);
-			this->textBox2->TabIndex = 17;
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox2_TextChanged);
+			this->textBox_prenom->Location = System::Drawing::Point(207, 91);
+			this->textBox_prenom->Name = L"textBox_prenom";
+			this->textBox_prenom->Size = System::Drawing::Size(150, 26);
+			this->textBox_prenom->TabIndex = 17;
+			this->textBox_prenom->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox2_TextChanged);
 			// 
-			// textBox3
+			// textBox_nom
 			// 
-			this->textBox3->Location = System::Drawing::Point(207, 57);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(150, 26);
-			this->textBox3->TabIndex = 18;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox3_TextChanged);
+			this->textBox_nom->Location = System::Drawing::Point(207, 57);
+			this->textBox_nom->Name = L"textBox_nom";
+			this->textBox_nom->Size = System::Drawing::Size(150, 26);
+			this->textBox_nom->TabIndex = 18;
+			this->textBox_nom->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox3_TextChanged);
 			// 
-			// textBox4
+			// textBox_quantite
 			// 
-			this->textBox4->Location = System::Drawing::Point(554, 86);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(175, 26);
-			this->textBox4->TabIndex = 19;
-			this->textBox4->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox4_TextChanged);
+			this->textBox_quantite->Location = System::Drawing::Point(554, 86);
+			this->textBox_quantite->Name = L"textBox_quantite";
+			this->textBox_quantite->Size = System::Drawing::Size(175, 26);
+			this->textBox_quantite->TabIndex = 19;
+			this->textBox_quantite->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox4_TextChanged);
 			// 
-			// textBox5
+			// textBox_couleur
 			// 
-			this->textBox5->Location = System::Drawing::Point(554, 54);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(175, 26);
-			this->textBox5->TabIndex = 20;
-			this->textBox5->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox5_TextChanged);
+			this->textBox_couleur->Location = System::Drawing::Point(554, 54);
+			this->textBox_couleur->Name = L"textBox_couleur";
+			this->textBox_couleur->Size = System::Drawing::Size(175, 26);
+			this->textBox_couleur->TabIndex = 20;
+			this->textBox_couleur->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox5_TextChanged);
 			// 
-			// textBox6
+			// textBox_ref
 			// 
-			this->textBox6->Location = System::Drawing::Point(554, 22);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(175, 26);
-			this->textBox6->TabIndex = 21;
-			this->textBox6->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox6_TextChanged);
+			this->textBox_ref->Location = System::Drawing::Point(554, 22);
+			this->textBox_ref->Name = L"textBox_ref";
+			this->textBox_ref->Size = System::Drawing::Size(175, 26);
+			this->textBox_ref->TabIndex = 21;
+			this->textBox_ref->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox6_TextChanged);
 			// 
-			// textBox7
+			// textBox_prixTTC
 			// 
-			this->textBox7->Location = System::Drawing::Point(901, 87);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(212, 26);
-			this->textBox7->TabIndex = 22;
-			this->textBox7->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox7_TextChanged);
+			this->textBox_prixTTC->Location = System::Drawing::Point(901, 87);
+			this->textBox_prixTTC->Name = L"textBox_prixTTC";
+			this->textBox_prixTTC->Size = System::Drawing::Size(212, 26);
+			this->textBox_prixTTC->TabIndex = 22;
+			this->textBox_prixTTC->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox7_TextChanged);
 			// 
-			// textBox8
+			// textBox_PrixTVA
 			// 
-			this->textBox8->Location = System::Drawing::Point(901, 54);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(212, 26);
-			this->textBox8->TabIndex = 23;
-			this->textBox8->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox8_TextChanged);
+			this->textBox_PrixTVA->Location = System::Drawing::Point(901, 54);
+			this->textBox_PrixTVA->Name = L"textBox_PrixTVA";
+			this->textBox_PrixTVA->Size = System::Drawing::Size(212, 26);
+			this->textBox_PrixTVA->TabIndex = 23;
+			this->textBox_PrixTVA->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox8_TextChanged);
 			// 
-			// textBox9
+			// textBox_prixHT
 			// 
-			this->textBox9->Location = System::Drawing::Point(901, 21);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(212, 26);
-			this->textBox9->TabIndex = 24;
-			this->textBox9->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox9_TextChanged);
+			this->textBox_prixHT->Location = System::Drawing::Point(901, 21);
+			this->textBox_prixHT->Name = L"textBox_prixHT";
+			this->textBox_prixHT->Size = System::Drawing::Size(212, 26);
+			this->textBox_prixHT->TabIndex = 24;
+			this->textBox_prixHT->TextChanged += gcnew System::EventHandler(this, &FormeStock::textBox9_TextChanged);
 			// 
 			// textBox10
 			// 
@@ -431,15 +443,15 @@ namespace G7interface {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1142, 682);
 			this->Controls->Add(this->textBox10);
-			this->Controls->Add(this->textBox9);
-			this->Controls->Add(this->textBox8);
-			this->Controls->Add(this->textBox7);
-			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->textBox_prixHT);
+			this->Controls->Add(this->textBox_PrixTVA);
+			this->Controls->Add(this->textBox_prixTTC);
+			this->Controls->Add(this->textBox_ref);
+			this->Controls->Add(this->textBox_couleur);
+			this->Controls->Add(this->textBox_quantite);
+			this->Controls->Add(this->textBox_nom);
+			this->Controls->Add(this->textBox_prenom);
+			this->Controls->Add(this->textBox_ID);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
@@ -468,15 +480,19 @@ namespace G7interface {
 #pragma endregion
 		//Bouton Afficher
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	}
 		   //Bouton Créer
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		
 	}
 		   //Bouton Modifier
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-	   //Bouton Supprimer
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button3_Click(System::Object ^ sender, System::EventArgs ^ e){
+		   
+	}
+		   //Bouton Supprimer
+    private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+
 }
 private: System::Void FormeStock_Load(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -486,6 +502,7 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 }
 	   // Textbox ID
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	
 }
 	   // Textbox Nom
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {

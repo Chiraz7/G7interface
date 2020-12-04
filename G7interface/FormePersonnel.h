@@ -37,13 +37,12 @@ namespace G7interface {
 			}
 		}
 	private: SVC_Gemploye^ gestionpersonnel= gcnew SVC_Gemploye();
-	private: String^ mode;
 	private: System::Windows::Forms::Button^ button1;
 	protected:
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -51,14 +50,25 @@ namespace G7interface {
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::ListBox^ listBox1;
+	private: System::Windows::Forms::TextBox^ textBox_ID;
+	private: System::Windows::Forms::TextBox^ textBox_nom;
+	private: System::Windows::Forms::TextBox^ textBox_prenom;
+	private: System::Windows::Forms::TextBox^ textBox_adresse;
+
+
+
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private: System::Windows::Forms::ComboBox^ comboBox_ville;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::ComboBox^ comboBox_sup;
+
+	private: System::Windows::Forms::Label^ label8;
+
 
 
 	private:
@@ -79,7 +89,6 @@ namespace G7interface {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -87,14 +96,17 @@ namespace G7interface {
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->textBox_ID = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_nom = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_prenom = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_adresse = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->comboBox_ville = (gcnew System::Windows::Forms::ComboBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->comboBox_sup = (gcnew System::Windows::Forms::ComboBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -160,22 +172,6 @@ namespace G7interface {
 			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &FormePersonnel::button4_Click);
 			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button5->ForeColor = System::Drawing::Color::White;
-			this->button5->Location = System::Drawing::Point(151, 405);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(187, 70);
-			this->button5->TabIndex = 4;
-			this->button5->Text = L"Enregistrer";
-			this->button5->UseVisualStyleBackColor = false;
-			this->button5->Click += gcnew System::EventHandler(this, &FormePersonnel::button5_Click);
-			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
@@ -189,7 +185,6 @@ namespace G7interface {
 			this->label1->Size = System::Drawing::Size(45, 29);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"ID :";
-			this->label1->Click += gcnew System::EventHandler(this, &FormePersonnel::label1_Click);
 			// 
 			// label2
 			// 
@@ -204,7 +199,6 @@ namespace G7interface {
 			this->label2->Size = System::Drawing::Size(77, 29);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"Nom : ";
-			this->label2->Click += gcnew System::EventHandler(this, &FormePersonnel::label2_Click);
 			// 
 			// label3
 			// 
@@ -219,7 +213,6 @@ namespace G7interface {
 			this->label3->Size = System::Drawing::Size(101, 29);
 			this->label3->TabIndex = 7;
 			this->label3->Text = L"Prénom :";
-			this->label3->Click += gcnew System::EventHandler(this, &FormePersonnel::label3_Click);
 			// 
 			// dataGridView1
 			// 
@@ -229,9 +222,9 @@ namespace G7interface {
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->RowTemplate->Height = 28;
+			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->dataGridView1->Size = System::Drawing::Size(571, 312);
 			this->dataGridView1->TabIndex = 8;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FormePersonnel::dataGridView1_CellContentClick);
 			// 
 			// button6
 			// 
@@ -257,7 +250,6 @@ namespace G7interface {
 			this->label4->Size = System::Drawing::Size(101, 29);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Adresse :";
-			this->label4->Click += gcnew System::EventHandler(this, &FormePersonnel::label4_Click);
 			// 
 			// label5
 			// 
@@ -272,49 +264,34 @@ namespace G7interface {
 			this->label5->Size = System::Drawing::Size(73, 29);
 			this->label5->TabIndex = 11;
 			this->label5->Text = L"Ville : ";
-			this->label5->Click += gcnew System::EventHandler(this, &FormePersonnel::label5_Click);
 			// 
-			// textBox1
+			// textBox_ID
 			// 
-			this->textBox1->Location = System::Drawing::Point(234, 12);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(240, 26);
-			this->textBox1->TabIndex = 12;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox1_TextChanged);
+			this->textBox_ID->Location = System::Drawing::Point(234, 12);
+			this->textBox_ID->Name = L"textBox_ID";
+			this->textBox_ID->Size = System::Drawing::Size(240, 26);
+			this->textBox_ID->TabIndex = 12;
 			// 
-			// textBox2
+			// textBox_nom
 			// 
-			this->textBox2->Location = System::Drawing::Point(234, 50);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(240, 26);
-			this->textBox2->TabIndex = 13;
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox2_TextChanged);
+			this->textBox_nom->Location = System::Drawing::Point(234, 50);
+			this->textBox_nom->Name = L"textBox_nom";
+			this->textBox_nom->Size = System::Drawing::Size(240, 26);
+			this->textBox_nom->TabIndex = 13;
 			// 
-			// textBox3
+			// textBox_prenom
 			// 
-			this->textBox3->Location = System::Drawing::Point(234, 88);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(240, 26);
-			this->textBox3->TabIndex = 14;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox3_TextChanged);
+			this->textBox_prenom->Location = System::Drawing::Point(234, 88);
+			this->textBox_prenom->Name = L"textBox_prenom";
+			this->textBox_prenom->Size = System::Drawing::Size(240, 26);
+			this->textBox_prenom->TabIndex = 14;
 			// 
-			// textBox4
+			// textBox_adresse
 			// 
-			this->textBox4->Location = System::Drawing::Point(724, 15);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(376, 26);
-			this->textBox4->TabIndex = 15;
-			this->textBox4->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox4_TextChanged);
-			// 
-			// listBox1
-			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 20;
-			this->listBox1->Location = System::Drawing::Point(724, 53);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(376, 84);
-			this->listBox1->TabIndex = 16;
-			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &FormePersonnel::listBox1_SelectedIndexChanged);
+			this->textBox_adresse->Location = System::Drawing::Point(724, 15);
+			this->textBox_adresse->Name = L"textBox_adresse";
+			this->textBox_adresse->Size = System::Drawing::Size(376, 26);
+			this->textBox_adresse->TabIndex = 15;
 			// 
 			// textBox5
 			// 
@@ -324,7 +301,6 @@ namespace G7interface {
 			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox5->Size = System::Drawing::Size(571, 147);
 			this->textBox5->TabIndex = 17;
-			this->textBox5->TextChanged += gcnew System::EventHandler(this, &FormePersonnel::textBox5_TextChanged);
 			// 
 			// label6
 			// 
@@ -334,20 +310,64 @@ namespace G7interface {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::White;
-			this->label6->Location = System::Drawing::Point(524, 145);
+			this->label6->Location = System::Drawing::Point(524, 128);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(203, 29);
 			this->label6->TabIndex = 18;
 			this->label6->Text = L"Date d\'embauche : ";
-			this->label6->Click += gcnew System::EventHandler(this, &FormePersonnel::label6_Click);
 			// 
 			// dateTimePicker1
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(724, 148);
+			this->dateTimePicker1->Location = System::Drawing::Point(724, 131);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(376, 26);
 			this->dateTimePicker1->TabIndex = 20;
-			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &FormePersonnel::dateTimePicker1_ValueChanged);
+			// 
+			// comboBox_ville
+			// 
+			this->comboBox_ville->FormattingEnabled = true;
+			this->comboBox_ville->Location = System::Drawing::Point(724, 69);
+			this->comboBox_ville->Name = L"comboBox_ville";
+			this->comboBox_ville->Size = System::Drawing::Size(376, 28);
+			this->comboBox_ville->TabIndex = 21;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::Transparent;
+			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button5->ForeColor = System::Drawing::Color::White;
+			this->button5->Location = System::Drawing::Point(151, 405);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(187, 70);
+			this->button5->TabIndex = 4;
+			this->button5->Text = L"Enregistrer";
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &FormePersonnel::button5_Click);
+			// 
+			// comboBox_sup
+			// 
+			this->comboBox_sup->FormattingEnabled = true;
+			this->comboBox_sup->Location = System::Drawing::Point(234, 128);
+			this->comboBox_sup->Name = L"comboBox_sup";
+			this->comboBox_sup->Size = System::Drawing::Size(241, 28);
+			this->comboBox_sup->TabIndex = 22;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
+			this->label8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->ForeColor = System::Drawing::Color::White;
+			this->label8->Location = System::Drawing::Point(109, 131);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(120, 29);
+			this->label8->TabIndex = 24;
+			this->label8->Text = L"Supérieur :";
 			// 
 			// FormePersonnel
 			// 
@@ -356,14 +376,16 @@ namespace G7interface {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1112, 667);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->comboBox_sup);
+			this->Controls->Add(this->comboBox_ville);
 			this->Controls->Add(this->dateTimePicker1);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->listBox1);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->textBox_adresse);
+			this->Controls->Add(this->textBox_prenom);
+			this->Controls->Add(this->textBox_nom);
+			this->Controls->Add(this->textBox_ID);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button6);
@@ -388,74 +410,18 @@ namespace G7interface {
 #pragma endregion
 		//Bouton Afficher
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
-	
 		   //Bouton Créer
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->textBox1->Text="";//ID
-		this->textBox2->Text = "";//Nom
-		this->textBox3->Text = "";//Prénom
-		this->textBox4->Text = "";//Adresse
-		this->textBox5->Text = "Veuillez saisir les informations ";//Message
-		this->dateTimePicker1->Text = "";//Date d'embauche
-		this->dataGridView1->DataSource = nullptr;
-		this->dataGridView1->Columns->Add("Nom_P", "Nom_P");
-		this->dataGridView1->Columns->Add("Prnom_P", "Prenom_P");
-		this->dataGridView1->Columns->Add("DATE_D_Embauche", "DATE_D_Embauche");
-		this->mode = "Creer";
-	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
 		   //Bouton Modifier
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 		   //Bouton Supprimer
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
-
-	private: System::Void FormePersonnel_Load(System::Object^ sender, System::EventArgs^ e);
 		   // DataGridView de personnel
-	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+	private: System::Void FormePersonnel_Load(System::Object^ sender, System::EventArgs^ e);
 		   // Bouton RETOUR
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
-		   // Bouton ID
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-		   // Bouton Nom
-private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Bouton Prénom
-private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Bouton Adresse
-private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Listbox Ville
-private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-
-	   //Bouton message
-private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e);  
 	   //Bouton Enregistrer
-private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Label ID 
-private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Label Nom
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Label Prénom
-private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Label Adresse
-private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Label Ville
-private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-	   // Label date d'embauche
-private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+    private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
 };
 } 
+

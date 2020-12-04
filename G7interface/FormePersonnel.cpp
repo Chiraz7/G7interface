@@ -1,77 +1,51 @@
 #include "FormePersonnel.h"
 
-System::Void G7interface::FormePersonnel_Load(System::Object^ sender, System::EventArgs^ e)
+System::Void G7interface::FormePersonnel::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	//chargement de la liste des des employe
-	dataGridView1->DataSource = gestionemploye->listeemploye();
+	this->gestionpersonnel->afficher(Convert::ToInt32(dataGridView1->SelectedRows[0]->Cells[0]->Value));
+	this->textBox_ID->Text = Convert::ToString(gestionpersonnel->personnel->get_id());
+	this->textBox_nom->Text = gestionpersonnel->personnel->get_nom();
+	this->textBox_prenom->Text = gestionpersonnel->personnel->get_prenom();
+	DateTime^ date = gestionpersonnel->personnel->get_date_embauche();
+	this->dateTimePicker1->Value = DateTime(date->Year, date->Month, date->Day);
+	this->textBox_adresse->Text = this->gestionpersonnel->adresse->getAdresse();
+	this->comboBox_ville->SelectedIndex = comboBox_ville->FindString(gestionpersonnel->ville->getNomVille());
+	//chiraz heba hlawa <3
 }
 
-System::Void Gestionpoo::Listepersonnel::button1_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void G7interface::FormePersonnel::button2_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	//ajout d'un nouvel employe
-	fe = gcnew FicheEmploye();
-
-	fe->set_comp_sup(gestionemploye->cad->getRows("select id_Personnel, concat(nom_P,' ',prenom_P) as employe from personnel"));
-	fe->set_comp_ville(gestionemploye->cad->getRows("select id_ville,nom_ville from ville"));
-	fe->ShowDialog();
-	if (fe->validate) {
-		if (fe->havesup()) {
-			gestionemploye->ajouter(fe->get_nom(), fe->get_prenom(), fe->get_embauche(), fe->get_adresse(), fe->get_ville(), fe->get_sup());
-		}
-		else {
-			gestionemploye->ajouter(fe->get_nom(), fe->get_prenom(), fe->get_embauche(), fe->get_adresse(), fe->get_ville());
-		}
-		Listepersonnel::Liste_Load(sender, e);
-	}
+	this->gestionpersonnel->ajouter(textBox_nom->Text, textBox_prenom->Text, dateTimePicker1->Value, textBox_adresse->Text, comboBox_ville->Text);
+	FormePersonnel_Load(sender,e);
 }
 
-System::Void Gestionpoo::Listepersonnel::button2_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void G7interface::FormePersonnel::button3_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	//affichage d'un personnel
-	fe = gcnew FicheEmploye();
-	gestionemploye->afficher(Convert::ToInt32(dataGridView1->SelectedRows[0]->Cells[0]->Value));
-	fe->set_comp_sup(gestionemploye->cad->getRows("select id_Personnel, concat(nom_P,' ',prenom_P) as employe from personnel"));
-	fe->set_comp_ville(gestionemploye->cad->getRows("select id_ville,nom_ville from ville"));
-	fe->set_nom(gestionemploye->personnel->get_nom());
-	fe->set_prenom(gestionemploye->personnel->get_prenom());
-	fe->set_date(gestionemploye->personnel->get_date_embauche());
-	fe->set_sup(gestionemploye->personnel->get_id_superieur());
-	fe->set_adresse(gestionemploye->adresse->getAdresse());
-	fe->set_ville(gestionemploye->ville->getIdVille());
-	fe->set_id(gestionemploye->personnel->get_id());
-	fe->mode_affichage();
-	fe->ShowDialog();
+	
+	this->gestionpersonnel->modifier(Convert::ToInt32(textBox_ID->Text),textBox_nom->Text, textBox_prenom->Text, dateTimePicker1->Value, textBox_adresse->Text, comboBox_ville->Text);
+	FormePersonnel_Load(sender, e);
 }
 
-System::Void G7interface::button3_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void G7interface::FormePersonnel::button4_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	//supprimer un employe
-	gestionemploye->afficher(Convert::ToInt32(dataGridView1->SelectedRows[0]->Cells[0]->Value));
-	DialogResult result = MessageBox::Show("etes vous sur de vouloir supprimer l'employe " + this->gestionemploye->personnel->get_nom() + " " + this->gestionemploye->personnel->get_prenom() + "?", "Suppression d'un employe", MessageBoxButtons::OKCancel);
-	if (result == DialogResult::OK) {
-		gestionemploye->supprimer();
-		Listepersonnel::Liste_Load(sender, e);
-	}
-
+	this->gestionpersonnel->supprimer(Convert::ToInt32(dataGridView1->SelectedRows[0]->Cells[0]->Value));
+	FormePersonnel_Load(sender, e);
 }
 
-System::Void Gestionpoo::Listepersonnel::button4_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void G7interface::FormePersonnel::FormePersonnel_Load(System::Object^ sender, System::EventArgs^ e)
 {
-	//modifier un employe 
-	button2_Click(sender, e);
-	if (fe->validate) {
-		if (fe->havesup()) {
-			gestionemploye->modifier(fe->get_nom(), fe->get_prenom(), fe->get_embauche(), fe->get_adresse(), fe->get_ville(), fe->get_sup());
-		}
-		else {
-			gestionemploye->modifier(fe->get_nom(), fe->get_prenom(), fe->get_embauche(), fe->get_adresse(), fe->get_ville());
-		}
-		Listepersonnel::Liste_Load(sender, e);
-	}
+	dataGridView1->DataSource = this->gestionpersonnel->listeemploye();
+	comboBox_ville->DataSource = this->gestionpersonnel->liste_ville();
+	comboBox_ville->DisplayMember = "Nom_Ville";
+	comboBox_ville->ValueMember = "Id_Ville";
 }
 
-System::Void Gestionpoo::Listepersonnel::button5_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void G7interface::FormePersonnel::button6_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	//actualiser la liste des employe
-	Listepersonnel::Liste_Load(sender, e);
+	this->Close();
+}
+
+System::Void G7interface::FormePersonnel::button5_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	return System::Void();
 }
