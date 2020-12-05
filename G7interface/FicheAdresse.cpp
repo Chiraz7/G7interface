@@ -1,54 +1,65 @@
 #include "FicheAdresse.h"
 using namespace System;
 
-System::Void G7interface::FicheAdresse::button_valider_Click(System::Object^ sender, System::EventArgs^ e)
+
+System::Void G7interface::FicheAdresse::button_valider_Click_1(System::Object^ sender, System::EventArgs^ e)
 {
-    return System::Void();
+    this->Close();
 }
 
-System::Void G7interface::FicheAdresse::button1_Click(System::Object^ sender, System::EventArgs^ e)
-{
-    return System::Void();
-}
 
-System::Void G7interface::FicheAdresse::button2_Click(System::Object^ sender, System::EventArgs^ e)
-{
-    return System::Void();
-}
-
-System::Void G7interface::FicheAdresse::button3_Click(System::Object^ sender, System::EventArgs^ e)
-{
-    return System::Void();
-}
 
 System::Void G7interface::FicheAdresse::FicheAdresse_Load(System::Object^ sender, System::EventArgs^ e)
 {
     return System::Void();
 }
 
-String^ G7interface::FicheAdresse::get_adresse()
+
+System::Data::DataTable^ G7interface::FicheAdresse::getAdressedatagried()
 {
-    return this->textBox_adresse->Text;
+    DataTable^ dadresse = gcnew DataTable();
+    dadresse->Columns->Add("Id");
+    dadresse->Columns->Add("Adresse");
+    dadresse->Columns->Add("Ville");
+    for (int i = 0; i < dataGridView1->Rows->Count - 1; i++) {
+        dadresse->Rows->Add(Convert::ToInt32(dataGridView1->Rows[i]->Cells[0]->Value), Convert::ToString(dataGridView1->Rows[i]->Cells[1]->Value), Convert::ToString(dataGridView1->Rows[i]->Cells[2]->Value));
+    }
+    return dadresse;
 }
 
-String^ G7interface::FicheAdresse::get_ville()
-{
-    return this->comboBox_Ville->Text;
+System::Void G7interface::FicheAdresse::setadresses(List<Composant::Adresse^>^ adresse)
+{   
+    for (int i = 0; i < adresse->Count; i++) {
+        comboBox_Ville->SelectedValue = adresse[i]->getIdVille();
+        this->dataGridView1->Rows->Add(adresse[i]->getIdAdresse(), adresse[i]->getAdresse(), comboBox_Ville->GetItemText(comboBox_Ville->SelectedItem));
+    }
+    comboBox_Ville->SelectedIndex = 0;
 }
 
-void G7interface::FicheAdresse::set_combobox_ville(DataTable^ tableVille)
+
+System::Void G7interface::FicheAdresse::setcomboville(DataTable^ ville)
 {
-    this->comboBox_Ville->DataSource = tableVille;
-    this->comboBox_Ville->ValueMember = "id_ville";
-    this->comboBox_Ville->DisplayMember = "nom_ville";
+   
+    this->comboBox_Ville->DataSource= ville;
+    this->comboBox_Ville->ValueMember = "Id_Ville";
+    this->comboBox_Ville->DisplayMember = "Nom_Ville";
+}
+   
+
+System::Void G7interface::FicheAdresse::button1_Ajouter_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    this->dataGridView1->Rows->Add(0, this->textBox_adresse->Text, this->comboBox_Ville->Text);
 }
 
-void G7interface::FicheAdresse::set_ville(String^ ville)
+System::Void G7interface::FicheAdresse::button1_Modifier_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    this->comboBox_Ville->SelectedIndex = comboBox_Ville->FindString(ville);
+    this->dataGridView1->SelectedRows[0]->Cells[0]->Value = textBox_adresse->Text;
+    this->dataGridView1->SelectedRows[0]->Cells[0]->Value = comboBox_Ville->Text;
 }
 
-void G7interface::FicheAdresse::set_adresse(String^ adresse)
+System::Void G7interface::FicheAdresse::button3_supprimer_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    this->textBox_adresse->Text = adresse;
+    this->supprimeradresse->Add(Convert::ToInt32(this->dataGridView1->SelectedRows[0]->Cells[0]->Value));
+    this->dataGridView1->Rows->Remove(dataGridView1->SelectedRows[0]);
 }
+

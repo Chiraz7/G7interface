@@ -1,4 +1,5 @@
 #include "FormeClient.h"
+#include "Adresse.h"
 
 System::Void G7interface::FormeClient::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
@@ -10,17 +11,34 @@ System::Void G7interface::FormeClient::button1_Click(System::Object^ sender, Sys
 
 System::Void G7interface::FormeClient::button2_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	return System::Void();
+	FicheAdresse^ Forme = gcnew FicheAdresse();
+	Forme->setcomboville(this->gestionclient->listeville());
+	Forme->setadresses(this->gestionclient->get_adrclient());
+	this->Hide();
+	Forme->ShowDialog();
+	this->Show();
+	this->gestionclient->ajouter(textBox_nom->Text, textBox_prenom->Text, dateTimePicker1->Value, dateTimePicker2_achat->Value, Forme->getAdressedatagried());
+	FormeClient_Load(sender, e);
 }
 
 System::Void G7interface::FormeClient::button3_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	return System::Void();
+FicheAdresse^ Forme = gcnew FicheAdresse();
+	Forme->setcomboville(this->gestionclient->listeville());
+	Forme->setadresses(this->gestionclient->get_adrclient());
+	this->Hide();
+	Forme->ShowDialog();
+	this->Show();
+	this->gestionclient->modifier(Convert::ToInt32(textBox_id->Text), textBox_nom->Text, textBox_prenom->Text, dateTimePicker1->Value, dateTimePicker2_achat->Value, Forme->getAdressedatagried(), Forme->supprimeradresse);
+	FormeClient_Load(sender, e);
 }
 
 System::Void G7interface::FormeClient::button4_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	return System::Void();
+	this->gestionclient->supprimer(Convert::ToInt32(this->dataGridView1->SelectedRows[0]->Cells[0]->Value));
+	FicheAdresse^ page = gcnew FicheAdresse();
+	FormeClient_Load(sender, e);
+	
 }
 
 System::Void G7interface::FormeClient::FormeClient_Load(System::Object^ sender, System::EventArgs^ e)
@@ -41,6 +59,8 @@ System::Void G7interface::FormeClient::button5_Click(System::Object^ sender, Sys
 System::Void G7interface::FormeClient::button7_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	FicheAdresse^ Forme = gcnew FicheAdresse();
+    Forme->setcomboville(this->gestionclient->listeville());
+	Forme->setadresses(this->gestionclient->get_adrclient());
 	this->Hide();
 	Forme->ShowDialog();
 	this->Show();

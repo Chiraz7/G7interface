@@ -65,6 +65,8 @@ namespace Service {
 			v->setIdVille(a->getIdVille());
 			v->setNomVille(Convert::ToString(this->cad->getRows(v->SELECTbyid())->Rows[0]->ItemArray[1]));
 			ville->Add(v);
+			v = gcnew Composant::Ville();
+			a = gcnew Composant::Adresse();
 		}
 	}
 	void SVC_Gclient::ajouter(String^ nom, String^ prenom, DateTime^ date_naiss, DateTime^ date_pr_achat, DataTable^ d)
@@ -85,10 +87,12 @@ namespace Service {
 			addr->setIdClient(this->client->get_id());
 			addr->setIdAdresse(this->cad->actionRowsID(addr->INSERTclient()));
 			this->adrclient->Add(addr);
+			v = gcnew Composant::Ville();
+			addr = gcnew Composant::Adresse();
 		}
 
 	}
-	void SVC_Gclient::modifier(int id_client, String^ nom, String^ prenom, System::DateTime^ date_naiss, System::DateTime^ date_pr_achat, DataTable^ d)
+	void SVC_Gclient::modifier(int id_client, String^ nom, String^ prenom, System::DateTime^ date_naiss, System::DateTime^ date_pr_achat, DataTable^ d, List<int>^ deladr)
 	{
 		this->client->set_id(id_client);
 		this->client->set_nom(nom);
@@ -105,9 +109,22 @@ namespace Service {
 			addr->setAdresse(Convert::ToString(d->Rows[i]->ItemArray[1]));
 			addr->setIdVille(v->getIdVille());
 			addr->setIdClient(this->client->get_id());
-			addr->setIdAdresse(Convert::ToInt32(d->Rows[i]->ItemArray[0]));
-			this->cad->actionRows(addr->UPDATEclient());
+			int h = Convert::ToInt32(d->Rows[i]->ItemArray[0]);
+			if (h == 0) {
+				addr->setIdAdresse(this->cad->actionRowsID(addr->INSERTclient()));
+			}
+			else {
+				addr->setIdAdresse(Convert::ToInt32(d->Rows[i]->ItemArray[0]));
+				this->cad->actionRows(addr->UPDATEclient());
+			}
 			this->adrclient->Add(addr);
+			v = gcnew Composant::Ville();
+			addr = gcnew Composant::Adresse();
+		}
+		for (int i = 0; i < deladr->Count; i++) {
+
+			addr->setIdAdresse(deladr[i]);
+			this->cad->actionRows(addr->DELETE());
 		}
 	}
 	void SVC_Gclient::supprimer(int id_client)
