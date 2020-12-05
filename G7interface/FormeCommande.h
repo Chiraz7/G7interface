@@ -46,14 +46,14 @@ namespace G7interface {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::Label^ label12;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
@@ -61,17 +61,17 @@ namespace G7interface {
 
 
 
-	private: System::Windows::Forms::ListBox^ listBox1;
 
-	private: System::Windows::Forms::ListBox^ listBox2;
-	private: System::Windows::Forms::ListBox^ listBox3;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::TextBox^ textBox11;
+
+
+
+
+
+
+
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker2;
-	private: System::Windows::Forms::DateTimePicker^ dateTimePicker3;
+
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker4;
 
 	private:
@@ -99,28 +99,12 @@ namespace G7interface {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker3 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->dateTimePicker4 = (gcnew System::Windows::Forms::DateTimePicker());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
@@ -284,126 +268,6 @@ namespace G7interface {
 			this->label4->Text = L"Date d\'émission :";
 			this->label4->Click += gcnew System::EventHandler(this, &FormeCommande::label4_Click);
 			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->BackColor = System::Drawing::Color::Transparent;
-			this->label5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::Color::White;
-			this->label5->Location = System::Drawing::Point(81, 142);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(201, 29);
-			this->label5->TabIndex = 11;
-			this->label5->Text = L"Date de paiement :";
-			this->label5->Click += gcnew System::EventHandler(this, &FormeCommande::label5_Click);
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->BackColor = System::Drawing::Color::Transparent;
-			this->label6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::Color::White;
-			this->label6->Location = System::Drawing::Point(81, 175);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(224, 29);
-			this->label6->TabIndex = 12;
-			this->label6->Text = L"Moyen de paiement :";
-			this->label6->Click += gcnew System::EventHandler(this, &FormeCommande::label6_Click);
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->BackColor = System::Drawing::Color::Transparent;
-			this->label7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label7->ForeColor = System::Drawing::Color::White;
-			this->label7->Location = System::Drawing::Point(566, 202);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(154, 29);
-			this->label7->TabIndex = 13;
-			this->label7->Text = L"Montant TTC :";
-			this->label7->Click += gcnew System::EventHandler(this, &FormeCommande::label7_Click);
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->BackColor = System::Drawing::Color::Transparent;
-			this->label8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label8->ForeColor = System::Drawing::Color::White;
-			this->label8->Location = System::Drawing::Point(566, 170);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(156, 29);
-			this->label8->TabIndex = 14;
-			this->label8->Text = L"Montant TVA :";
-			this->label8->Click += gcnew System::EventHandler(this, &FormeCommande::label8_Click);
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->BackColor = System::Drawing::Color::Transparent;
-			this->label9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label9->ForeColor = System::Drawing::Color::White;
-			this->label9->Location = System::Drawing::Point(566, 142);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(144, 29);
-			this->label9->TabIndex = 15;
-			this->label9->Text = L"Montant HT :";
-			this->label9->Click += gcnew System::EventHandler(this, &FormeCommande::label9_Click);
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->BackColor = System::Drawing::Color::Transparent;
-			this->label10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label10->ForeColor = System::Drawing::Color::White;
-			this->label10->Location = System::Drawing::Point(566, 104);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(111, 29);
-			this->label10->TabIndex = 16;
-			this->label10->Text = L"Quantité :";
-			this->label10->Click += gcnew System::EventHandler(this, &FormeCommande::label10_Click);
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->BackColor = System::Drawing::Color::Transparent;
-			this->label11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label11->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label11->ForeColor = System::Drawing::Color::White;
-			this->label11->Location = System::Drawing::Point(566, 58);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(133, 29);
-			this->label11->TabIndex = 17;
-			this->label11->Text = L"Nom article:";
-			this->label11->Click += gcnew System::EventHandler(this, &FormeCommande::label11_Click);
-			// 
-			// label12
-			// 
-			this->label12->AutoSize = true;
-			this->label12->BackColor = System::Drawing::Color::Transparent;
-			this->label12->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label12->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label12->ForeColor = System::Drawing::Color::White;
-			this->label12->Location = System::Drawing::Point(566, 9);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(188, 29);
-			this->label12->TabIndex = 18;
-			this->label12->Text = L"Référence article :";
-			this->label12->Click += gcnew System::EventHandler(this, &FormeCommande::label12_Click);
-			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
@@ -412,7 +276,7 @@ namespace G7interface {
 			this->label13->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label13->ForeColor = System::Drawing::Color::White;
-			this->label13->Location = System::Drawing::Point(0, 213);
+			this->label13->Location = System::Drawing::Point(0, 173);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(316, 29);
 			this->label13->TabIndex = 19;
@@ -441,77 +305,15 @@ namespace G7interface {
 			// 
 			this->textBox3->Location = System::Drawing::Point(325, 47);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(182, 26);
+			this->textBox3->Size = System::Drawing::Size(205, 26);
 			this->textBox3->TabIndex = 22;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox3_TextChanged);
-			// 
-			// listBox1
-			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 20;
-			this->listBox1->Location = System::Drawing::Point(325, 171);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(182, 44);
-			this->listBox1->TabIndex = 26;
-			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &FormeCommande::listBox1_SelectedIndexChanged);
-			// 
-			// listBox2
-			// 
-			this->listBox2->FormattingEnabled = true;
-			this->listBox2->ItemHeight = 20;
-			this->listBox2->Location = System::Drawing::Point(760, 13);
-			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(343, 44);
-			this->listBox2->TabIndex = 28;
-			this->listBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &FormeCommande::listBox2_SelectedIndexChanged);
-			// 
-			// listBox3
-			// 
-			this->listBox3->FormattingEnabled = true;
-			this->listBox3->ItemHeight = 20;
-			this->listBox3->Location = System::Drawing::Point(760, 60);
-			this->listBox3->Name = L"listBox3";
-			this->listBox3->Size = System::Drawing::Size(343, 44);
-			this->listBox3->TabIndex = 29;
-			this->listBox3->SelectedIndexChanged += gcnew System::EventHandler(this, &FormeCommande::listBox3_SelectedIndexChanged);
-			// 
-			// textBox8
-			// 
-			this->textBox8->Location = System::Drawing::Point(760, 205);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(343, 26);
-			this->textBox8->TabIndex = 30;
-			this->textBox8->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox8_TextChanged);
-			// 
-			// textBox9
-			// 
-			this->textBox9->Location = System::Drawing::Point(760, 173);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(343, 26);
-			this->textBox9->TabIndex = 31;
-			this->textBox9->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox9_TextChanged);
-			// 
-			// textBox10
-			// 
-			this->textBox10->Location = System::Drawing::Point(760, 140);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(343, 26);
-			this->textBox10->TabIndex = 32;
-			this->textBox10->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox10_TextChanged);
-			// 
-			// textBox11
-			// 
-			this->textBox11->Location = System::Drawing::Point(760, 108);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(343, 26);
-			this->textBox11->TabIndex = 33;
-			this->textBox11->TextChanged += gcnew System::EventHandler(this, &FormeCommande::textBox11_TextChanged);
 			// 
 			// dateTimePicker1
 			// 
 			this->dateTimePicker1->Location = System::Drawing::Point(325, 109);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(182, 26);
+			this->dateTimePicker1->Size = System::Drawing::Size(212, 26);
 			this->dateTimePicker1->TabIndex = 34;
 			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &FormeCommande::dateTimePicker1_ValueChanged);
 			// 
@@ -519,21 +321,13 @@ namespace G7interface {
 			// 
 			this->dateTimePicker2->Location = System::Drawing::Point(325, 78);
 			this->dateTimePicker2->Name = L"dateTimePicker2";
-			this->dateTimePicker2->Size = System::Drawing::Size(182, 26);
+			this->dateTimePicker2->Size = System::Drawing::Size(212, 26);
 			this->dateTimePicker2->TabIndex = 35;
 			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &FormeCommande::dateTimePicker2_ValueChanged);
 			// 
-			// dateTimePicker3
-			// 
-			this->dateTimePicker3->Location = System::Drawing::Point(325, 140);
-			this->dateTimePicker3->Name = L"dateTimePicker3";
-			this->dateTimePicker3->Size = System::Drawing::Size(182, 26);
-			this->dateTimePicker3->TabIndex = 36;
-			this->dateTimePicker3->ValueChanged += gcnew System::EventHandler(this, &FormeCommande::dateTimePicker3_ValueChanged);
-			// 
 			// dateTimePicker4
 			// 
-			this->dateTimePicker4->Location = System::Drawing::Point(325, 221);
+			this->dateTimePicker4->Location = System::Drawing::Point(325, 170);
 			this->dateTimePicker4->Name = L"dateTimePicker4";
 			this->dateTimePicker4->Size = System::Drawing::Size(182, 26);
 			this->dateTimePicker4->TabIndex = 37;
@@ -547,28 +341,12 @@ namespace G7interface {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1115, 639);
 			this->Controls->Add(this->dateTimePicker4);
-			this->Controls->Add(this->dateTimePicker3);
 			this->Controls->Add(this->dateTimePicker2);
 			this->Controls->Add(this->dateTimePicker1);
-			this->Controls->Add(this->textBox11);
-			this->Controls->Add(this->textBox10);
-			this->Controls->Add(this->textBox9);
-			this->Controls->Add(this->textBox8);
-			this->Controls->Add(this->listBox3);
-			this->Controls->Add(this->listBox2);
-			this->Controls->Add(this->listBox1);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label13);
-			this->Controls->Add(this->label12);
-			this->Controls->Add(this->label11);
-			this->Controls->Add(this->label10);
-			this->Controls->Add(this->label9);
-			this->Controls->Add(this->label8);
-			this->Controls->Add(this->label7);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);

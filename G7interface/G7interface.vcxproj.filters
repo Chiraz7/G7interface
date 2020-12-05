@@ -36,9 +36,6 @@
     <ClCompile Include="CAD.cpp">
       <Filter>Classes composantes</Filter>
     </ClCompile>
-    <ClCompile Include="Choisir.cpp">
-      <Filter>Classes composantes</Filter>
-    </ClCompile>
     <ClCompile Include="FormeClient.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -84,6 +81,15 @@
     <ClCompile Include="FicheAdresse.cpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClCompile>
+    <ClCompile Include="SVC_Gcommande.cpp">
+      <Filter>Classe service</Filter>
+    </ClCompile>
+    <ClCompile Include="FicheCommande.cpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
+    <ClCompile Include="Choisir.cpp">
+      <Filter>Classes composantes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -99,9 +105,6 @@
       <Filter>Classes composantes</Filter>
     </ClInclude>
     <ClInclude Include="CAD.h">
-      <Filter>Classes composantes</Filter>
-    </ClInclude>
-    <ClInclude Include="Choisir.h">
       <Filter>Classes composantes</Filter>
     </ClInclude>
     <ClInclude Include="FormeClient.h">
@@ -148,6 +151,15 @@
     </ClInclude>
     <ClInclude Include="FicheAdresse.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gcommande.h">
+      <Filter>Classe service</Filter>
+    </ClInclude>
+    <ClInclude Include="FicheCommande.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Choisir.h">
+      <Filter>Classes composantes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

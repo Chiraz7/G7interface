@@ -68,16 +68,16 @@ namespace Composant {
 		return "UPDATE commande " + "SET id_commande= '" + this->get_id_commande() + "', date_emission = '" + date_to_string(this->get_date_emission())
 			+ "', reference = " + this->get_ref() + ", date_livraison = " + date_to_string(this->get_date_livraison()) + ", date_reglementsolde = " +
 			date_to_string(this->get_date_reglement_solde()) +
-			",id_client = " + this->get_id_client() + ",id_adresse = " + this->get_id_adresse_livraison() + ",id_adresse_facturation = " + this->get_adresse_facturation() + "WHERE(ID_commande = " + this->get_id_commande() + ");";
+			",id_client = " + this->get_id_client() + ",id_adresse_livraison = " + this->get_id_adresse_livraison() + ",id_adresse_facturation = " + this->get_adresse_facturation() + "WHERE(ID_commande = " + this->get_id_commande() + ");";
 	}
 	System::String^ Commande::DELETE() {
 		return "DELETE FROM commande " +
 			"WHERE(ID_commande = " + this->get_id_commande() + ");";
 	}
 	System::String^ Commande::INSERT() {
-		return "insert into commande(date_emission,reference,date_livraison,date_reglementsolde,id_client,id_adresse,id_adresse_facturation)" +
-			"values(" + date_to_string(this->get_date_emission()) + ",'" + this->get_ref() + "'," + date_to_string(this->get_date_livraison()) + "," +
-			date_to_string(this->get_date_reglement_solde()) + "," + this->get_id_client() + "," + this->get_id_adresse_livraison() + "," + this->get_adresse_facturation() + ");select @@IDENTITY;";
+		return "insert into commande(date_emission,reference,date_livraison,date_reglementsolde,id_client,id_adresse_livraison,id_adresse_facturation)" +
+			"values(convert(datetime,'" + (this->get_date_emission()) + "', 103),'" + this->get_ref() + "convert(datetime,'" + (this->get_date_emission()) + "', 103) " + "," +
+			"convert(datetime, '" + (this->get_date_livraison()) + "', 103),'" + "convert(datetime, '" + (this->get_date_reglement_solde()) + "', 103),'" + this->get_id_client() + "," + this->get_id_adresse_livraison() + "," + this->get_adresse_facturation() + ");select @@IDENTITY;";
 	}
 	System::String^ Commande::date_to_string(System::DateTime^ date) {
 		return date->Year + "" + date->Month + "" + date->Day;

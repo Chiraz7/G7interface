@@ -162,6 +162,7 @@ namespace G7interface {
 			// 
 			// dataGridView1
 			// 
+			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(537, 225);
@@ -169,7 +170,9 @@ namespace G7interface {
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->RowTemplate->Height = 28;
 			this->dataGridView1->Size = System::Drawing::Size(525, 264);
+			this->dataGridView1->StandardTab = true;
 			this->dataGridView1->TabIndex = 4;
+			this->dataGridView1->UseWaitCursor = true;
 			// 
 			// button5
 			// 
@@ -274,6 +277,7 @@ namespace G7interface {
 			this->textBox_id->Name = L"textBox_id";
 			this->textBox_id->Size = System::Drawing::Size(260, 26);
 			this->textBox_id->TabIndex = 14;
+			// 
 			// textBox_nom
 			// 
 			this->textBox_nom->Location = System::Drawing::Point(195, 41);
