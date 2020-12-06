@@ -126,14 +126,16 @@
     <ClCompile Include="Choisir.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Commande.cpp" />
+    <ClCompile Include="FicheCommande.cpp" />
     <ClCompile Include="FormeClient.cpp" />
     <ClCompile Include="FormeCommande.cpp" />
+    <ClCompile Include="ListeArticle.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="FormePersonnel.cpp" />
     <ClCompile Include="FormeStatistiques.cpp" />
     <ClCompile Include="FormeStock.cpp" />
     <ClCompile Include="FicheAdresse.cpp" />
-    <ClCompile Include="FicheCommande.cpp" />
+    <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="Paiement.cpp" />
     <ClCompile Include="Personne.cpp" />
     <ClCompile Include="Personnel.cpp" />
@@ -152,10 +154,16 @@
     <ClInclude Include="Choisir.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Commande.h" />
+    <ClInclude Include="FicheCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormeClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormeCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ListeArticle.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm.h">
@@ -173,7 +181,7 @@
     <ClInclude Include="FicheAdresse.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FicheCommande.h">
+    <ClInclude Include="MyForm1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Paiement.h" />
@@ -197,6 +205,9 @@
     <EmbeddedResource Include="FormeCommande.resx">
       <DependentUpon>FormeCommande.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListeArticle.resx">
+      <DependentUpon>ListeArticle.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FicheAdresse.resx">
       <DependentUpon>FicheAdresse.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm1.resx">
+      <DependentUpon>MyForm1.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

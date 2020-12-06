@@ -81,9 +81,6 @@
     <ClCompile Include="SVC_Gcommande.cpp">
       <Filter>Classe service</Filter>
     </ClCompile>
-    <ClCompile Include="FicheCommande.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
     <ClCompile Include="Choisir.cpp">
       <Filter>Classes composantes</Filter>
     </ClCompile>
@@ -91,6 +88,15 @@
       <Filter>Classe service</Filter>
     </ClCompile>
     <ClCompile Include="FormeCommande.cpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
+    <ClCompile Include="ListeArticle.cpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
+    <ClCompile Include="FicheCommande.cpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm1.cpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClCompile>
   </ItemGroup>
@@ -158,14 +164,20 @@
     <ClInclude Include="SVC_Gcommande.h">
       <Filter>Classe service</Filter>
     </ClInclude>
-    <ClInclude Include="FicheCommande.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Choisir.h">
       <Filter>Classes composantes</Filter>
     </ClInclude>
     <ClInclude Include="SVC_GStatistique.h">
       <Filter>Classe service</Filter>
+    </ClInclude>
+    <ClInclude Include="ListeArticle.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="FicheCommande.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm1.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

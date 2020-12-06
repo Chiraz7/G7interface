@@ -68,6 +68,7 @@ namespace G7interface {
 	private: System::Windows::Forms::ComboBox^ comboBox_sup;
 
 	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::CheckBox^ checkBox1;
 
 
 
@@ -107,6 +108,7 @@ namespace G7interface {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->comboBox_sup = (gcnew System::Windows::Forms::ComboBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -119,7 +121,7 @@ namespace G7interface {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::Transparent;
-			this->button1->Location = System::Drawing::Point(10, 202);
+			this->button1->Location = System::Drawing::Point(10, 217);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(125, 42);
 			this->button1->TabIndex = 0;
@@ -134,7 +136,7 @@ namespace G7interface {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::Transparent;
-			this->button2->Location = System::Drawing::Point(350, 203);
+			this->button2->Location = System::Drawing::Point(462, 217);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(125, 41);
 			this->button2->TabIndex = 1;
@@ -149,7 +151,7 @@ namespace G7interface {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::Transparent;
-			this->button3->Location = System::Drawing::Point(10, 623);
+			this->button3->Location = System::Drawing::Point(29, 684);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(125, 38);
 			this->button3->TabIndex = 2;
@@ -164,7 +166,7 @@ namespace G7interface {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::Color::Transparent;
-			this->button4->Location = System::Drawing::Point(350, 623);
+			this->button4->Location = System::Drawing::Point(453, 684);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(134, 38);
 			this->button4->TabIndex = 3;
@@ -218,12 +220,12 @@ namespace G7interface {
 			// 
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(529, 189);
+			this->dataGridView1->Location = System::Drawing::Point(593, 198);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->RowTemplate->Height = 28;
 			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->dataGridView1->Size = System::Drawing::Size(571, 312);
+			this->dataGridView1->Size = System::Drawing::Size(795, 312);
 			this->dataGridView1->TabIndex = 8;
 			// 
 			// button6
@@ -245,7 +247,7 @@ namespace G7interface {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::White;
-			this->label4->Location = System::Drawing::Point(524, 22);
+			this->label4->Location = System::Drawing::Point(707, 13);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(101, 29);
 			this->label4->TabIndex = 10;
@@ -259,7 +261,7 @@ namespace G7interface {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::White;
-			this->label5->Location = System::Drawing::Point(524, 69);
+			this->label5->Location = System::Drawing::Point(707, 66);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(73, 29);
 			this->label5->TabIndex = 11;
@@ -288,18 +290,18 @@ namespace G7interface {
 			// 
 			// textBox_adresse
 			// 
-			this->textBox_adresse->Location = System::Drawing::Point(724, 15);
+			this->textBox_adresse->Location = System::Drawing::Point(951, 13);
 			this->textBox_adresse->Name = L"textBox_adresse";
 			this->textBox_adresse->Size = System::Drawing::Size(376, 26);
 			this->textBox_adresse->TabIndex = 15;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(529, 516);
+			this->textBox5->Location = System::Drawing::Point(593, 528);
 			this->textBox5->Multiline = true;
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->textBox5->Size = System::Drawing::Size(571, 147);
+			this->textBox5->Size = System::Drawing::Size(795, 147);
 			this->textBox5->TabIndex = 17;
 			// 
 			// label6
@@ -310,7 +312,7 @@ namespace G7interface {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::White;
-			this->label6->Location = System::Drawing::Point(524, 128);
+			this->label6->Location = System::Drawing::Point(707, 131);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(203, 29);
 			this->label6->TabIndex = 18;
@@ -318,7 +320,7 @@ namespace G7interface {
 			// 
 			// dateTimePicker1
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(724, 131);
+			this->dateTimePicker1->Location = System::Drawing::Point(951, 126);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(376, 26);
 			this->dateTimePicker1->TabIndex = 20;
@@ -326,7 +328,7 @@ namespace G7interface {
 			// comboBox_ville
 			// 
 			this->comboBox_ville->FormattingEnabled = true;
-			this->comboBox_ville->Location = System::Drawing::Point(724, 69);
+			this->comboBox_ville->Location = System::Drawing::Point(951, 66);
 			this->comboBox_ville->Name = L"comboBox_ville";
 			this->comboBox_ville->Size = System::Drawing::Size(376, 28);
 			this->comboBox_ville->TabIndex = 21;
@@ -339,7 +341,7 @@ namespace G7interface {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::Color::White;
-			this->button5->Location = System::Drawing::Point(151, 405);
+			this->button5->Location = System::Drawing::Point(215, 440);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(187, 70);
 			this->button5->TabIndex = 4;
@@ -369,13 +371,23 @@ namespace G7interface {
 			this->label8->TabIndex = 24;
 			this->label8->Text = L"Supérieur :";
 			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Location = System::Drawing::Point(491, 131);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(22, 21);
+			this->checkBox1->TabIndex = 25;
+			this->checkBox1->UseVisualStyleBackColor = true;
+			// 
 			// FormePersonnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1112, 667);
+			this->ClientSize = System::Drawing::Size(1413, 734);
+			this->Controls->Add(this->checkBox1);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->comboBox_sup);
 			this->Controls->Add(this->comboBox_ville);
@@ -422,6 +434,9 @@ namespace G7interface {
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e);  
 	   //Bouton Enregistrer
     private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
+
+	
+
 };
 } 
 

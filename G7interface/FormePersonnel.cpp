@@ -14,8 +14,14 @@ System::Void G7interface::FormePersonnel::button1_Click(System::Object^ sender, 
 
 System::Void G7interface::FormePersonnel::button2_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	this->gestionpersonnel->ajouter(textBox_nom->Text, textBox_prenom->Text, dateTimePicker1->Value, textBox_adresse->Text, comboBox_ville->Text);
-	FormePersonnel_Load(sender,e);
+	if (checkBox1->Checked) {
+		this->gestionpersonnel->ajouter(textBox_nom->Text, textBox_prenom->Text, dateTimePicker1->Value, textBox_adresse->Text, comboBox_ville->Text);
+	}
+	else
+	{
+		this->gestionpersonnel->ajouter(textBox_nom->Text, textBox_prenom->Text, dateTimePicker1->Value, textBox_adresse->Text, comboBox_ville->Text,checkBox1->Checked);
+	}
+	FormePersonnel_Load(sender, e);
 }
 
 System::Void G7interface::FormePersonnel::button3_Click(System::Object^ sender, System::EventArgs^ e)
@@ -37,6 +43,9 @@ System::Void G7interface::FormePersonnel::FormePersonnel_Load(System::Object^ se
 	comboBox_ville->DataSource = this->gestionpersonnel->liste_ville();
 	comboBox_ville->DisplayMember = "Nom_Ville";
 	comboBox_ville->ValueMember = "Id_Ville";
+	this->comboBox_sup->DataSource = this->gestionpersonnel->cad->getRows("SELECT Id_personnel, CONCAT(nom_P,' ',prenom_P) as employe from personnel");
+	this->comboBox_sup->ValueMember = "Id_personnel";
+	this->comboBox_sup->DisplayMember = "Employe";
 }
 
 System::Void G7interface::FormePersonnel::button6_Click(System::Object^ sender, System::EventArgs^ e)
@@ -48,3 +57,4 @@ System::Void G7interface::FormePersonnel::button5_Click(System::Object^ sender, 
 {
 	return System::Void();
 }
+
