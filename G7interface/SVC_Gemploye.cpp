@@ -1,5 +1,4 @@
 #include "SVC_Gemploye.h"
-#include "SVC_Gemploye.h"
 namespace Service
 {
 	SVC_Gemploye::SVC_Gemploye(void)

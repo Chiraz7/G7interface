@@ -31,11 +31,22 @@ namespace Service {
 		this->ds = this->cad->getRows(this->commande->SELECT());
 		return this->ds;
 	}
-	void SVC_Gcommande::set_addr(DataTable^)
+	void SVC_Gcommande::set_addr(DataTable^adresse)
 	{
-		for (int i = 0; i < length; i++)
-		{
-
+		Composant::Adresse^ a = gcnew Composant::Adresse();
+		a->setIdClient(this->client->get_id());
+		adresse= this->cad->getRows(a->SELECTbyidclient());
+		Composant::Ville^ v = gcnew Composant::Ville();
+		for (int i = 0; i < adresse->Rows->Count; i++) {
+			a->setIdAdresse(Convert::ToInt32(adresse->Rows[i]->ItemArray[0]));
+			a->setAdresse(Convert::ToString(adresse->Rows[i]->ItemArray[1]));
+			a->setIdVille(Convert::ToInt32(adresse->Rows[i]->ItemArray[2]));
+			this->adresse->Add(a);
+			v->setIdVille(a->getIdVille());
+			v->setNomVille(Convert::ToString(this->cad->getRows(v->SELECTbyid())->Rows[0]->ItemArray[1]));
+			ville->Add(v);
+			v = gcnew Composant::Ville();
+			a = gcnew Composant::Adresse();
 		}
 	}
 	void SVC_Gcommande::afficher(int)

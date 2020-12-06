@@ -4,6 +4,7 @@ using namespace System;
 
 System::Void G7interface::FicheAdresse::button_valider_Click_1(System::Object^ sender, System::EventArgs^ e)
 {
+    
     this->Close();
 }
 
@@ -53,8 +54,8 @@ System::Void G7interface::FicheAdresse::button1_Ajouter_Click(System::Object^ se
 
 System::Void G7interface::FicheAdresse::button1_Modifier_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    this->dataGridView1->SelectedRows[0]->Cells[0]->Value = textBox_adresse->Text;
-    this->dataGridView1->SelectedRows[0]->Cells[0]->Value = comboBox_Ville->Text;
+    this->dataGridView1->SelectedRows[0]->Cells[1]->Value = textBox_adresse->Text;
+    this->dataGridView1->SelectedRows[0]->Cells[2]->Value = comboBox_Ville->Text;
 }
 
 System::Void G7interface::FicheAdresse::button3_supprimer_Click(System::Object^ sender, System::EventArgs^ e)

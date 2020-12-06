@@ -9,7 +9,7 @@ System::Void G7interface::FormePersonnel::button1_Click(System::Object^ sender, 
 	DateTime^ date = gestionpersonnel->personnel->get_date_embauche();
 	this->dateTimePicker1->Value = DateTime(date->Year, date->Month, date->Day);
 	this->textBox_adresse->Text = this->gestionpersonnel->adresse->getAdresse();
-	this->comboBox_ville->SelectedIndex = comboBox_ville->FindString(gestionpersonnel->ville->getNomVille());
+	this->comboBox_ville->SelectedValue = gestionpersonnel->ville->getIdVille();
 }
 
 System::Void G7interface::FormePersonnel::button2_Click(System::Object^ sender, System::EventArgs^ e)

@@ -140,6 +140,7 @@
     <ClCompile Include="SVC_Gclient.cpp" />
     <ClCompile Include="SVC_Gcommande.cpp" />
     <ClCompile Include="SVC_Gemploye.cpp" />
+    <ClCompile Include="SVC_GStatistique.cpp" />
     <ClCompile Include="SVC_Gstock.cpp" />
     <ClCompile Include="Ville.cpp" />
     <ClCompile Include="Vivre.cpp" />
@@ -181,6 +182,7 @@
     <ClInclude Include="SVC_Gclient.h" />
     <ClInclude Include="SVC_Gcommande.h" />
     <ClInclude Include="SVC_Gemploye.h" />
+    <ClInclude Include="SVC_GStatistique.h" />
     <ClInclude Include="SVC_Gstock.h" />
     <ClInclude Include="Ville.h" />
     <ClInclude Include="Vivre.h" />

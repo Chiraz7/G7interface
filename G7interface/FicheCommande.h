@@ -36,18 +36,24 @@ namespace G7interface {
 			}
 		}
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::TextBox^ textBox11;
-	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::ListBox^ listBox3;
-	private: System::Windows::Forms::ListBox^ listBox2;
+	private: System::Windows::Forms::TextBox^ textBox_montantHT;
+	private: System::Windows::Forms::TextBox^ textBox_montantTVA;
+	private: System::Windows::Forms::TextBox^ textBox_montantTTC;
+
+
+
+
+	private: System::Windows::Forms::ListBox^ listBox_nom;
+
+	private: System::Windows::Forms::ListBox^ listBox_ref;
+
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDown_quantite;
 	protected:
 
 
@@ -67,19 +73,20 @@ namespace G7interface {
 		void InitializeComponent(void)
 		{
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
+			this->textBox_montantHT = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_montantTVA = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_montantTTC = (gcnew System::Windows::Forms::TextBox());
+			this->listBox_nom = (gcnew System::Windows::Forms::ListBox());
+			this->listBox_ref = (gcnew System::Windows::Forms::ListBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown_quantite = (gcnew System::Windows::Forms::NumericUpDown());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_quantite))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// dataGridView1
@@ -93,51 +100,44 @@ namespace G7interface {
 			this->dataGridView1->Size = System::Drawing::Size(998, 323);
 			this->dataGridView1->TabIndex = 0;
 			// 
-			// textBox11
+			// textBox_montantHT
 			// 
-			this->textBox11->Location = System::Drawing::Point(192, 175);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(343, 26);
-			this->textBox11->TabIndex = 45;
+			this->textBox_montantHT->Location = System::Drawing::Point(705, 60);
+			this->textBox_montantHT->Name = L"textBox_montantHT";
+			this->textBox_montantHT->Size = System::Drawing::Size(343, 26);
+			this->textBox_montantHT->TabIndex = 44;
 			// 
-			// textBox10
+			// textBox_montantTVA
 			// 
-			this->textBox10->Location = System::Drawing::Point(705, 60);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(343, 26);
-			this->textBox10->TabIndex = 44;
+			this->textBox_montantTVA->Location = System::Drawing::Point(705, 114);
+			this->textBox_montantTVA->Name = L"textBox_montantTVA";
+			this->textBox_montantTVA->Size = System::Drawing::Size(343, 26);
+			this->textBox_montantTVA->TabIndex = 43;
 			// 
-			// textBox9
+			// textBox_montantTTC
 			// 
-			this->textBox9->Location = System::Drawing::Point(705, 114);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(343, 26);
-			this->textBox9->TabIndex = 43;
+			this->textBox_montantTTC->Location = System::Drawing::Point(705, 171);
+			this->textBox_montantTTC->Name = L"textBox_montantTTC";
+			this->textBox_montantTTC->Size = System::Drawing::Size(343, 26);
+			this->textBox_montantTTC->TabIndex = 42;
 			// 
-			// textBox8
+			// listBox_nom
 			// 
-			this->textBox8->Location = System::Drawing::Point(705, 171);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(343, 26);
-			this->textBox8->TabIndex = 42;
+			this->listBox_nom->FormattingEnabled = true;
+			this->listBox_nom->ItemHeight = 20;
+			this->listBox_nom->Location = System::Drawing::Point(192, 111);
+			this->listBox_nom->Name = L"listBox_nom";
+			this->listBox_nom->Size = System::Drawing::Size(343, 44);
+			this->listBox_nom->TabIndex = 41;
 			// 
-			// listBox3
+			// listBox_ref
 			// 
-			this->listBox3->FormattingEnabled = true;
-			this->listBox3->ItemHeight = 20;
-			this->listBox3->Location = System::Drawing::Point(192, 111);
-			this->listBox3->Name = L"listBox3";
-			this->listBox3->Size = System::Drawing::Size(343, 44);
-			this->listBox3->TabIndex = 41;
-			// 
-			// listBox2
-			// 
-			this->listBox2->FormattingEnabled = true;
-			this->listBox2->ItemHeight = 20;
-			this->listBox2->Location = System::Drawing::Point(192, 56);
-			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(343, 44);
-			this->listBox2->TabIndex = 40;
+			this->listBox_ref->FormattingEnabled = true;
+			this->listBox_ref->ItemHeight = 20;
+			this->listBox_ref->Location = System::Drawing::Point(192, 56);
+			this->listBox_ref->Name = L"listBox_ref";
+			this->listBox_ref->Size = System::Drawing::Size(343, 44);
+			this->listBox_ref->TabIndex = 40;
 			// 
 			// label12
 			// 
@@ -223,18 +223,25 @@ namespace G7interface {
 			this->label7->TabIndex = 34;
 			this->label7->Text = L"Montant TTC :";
 			// 
+			// numericUpDown_quantite
+			// 
+			this->numericUpDown_quantite->Location = System::Drawing::Point(192, 174);
+			this->numericUpDown_quantite->Name = L"numericUpDown_quantite";
+			this->numericUpDown_quantite->Size = System::Drawing::Size(343, 26);
+			this->numericUpDown_quantite->TabIndex = 45;
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::InactiveBorder;
 			this->ClientSize = System::Drawing::Size(1063, 559);
-			this->Controls->Add(this->textBox11);
-			this->Controls->Add(this->textBox10);
-			this->Controls->Add(this->textBox9);
-			this->Controls->Add(this->textBox8);
-			this->Controls->Add(this->listBox3);
-			this->Controls->Add(this->listBox2);
+			this->Controls->Add(this->numericUpDown_quantite);
+			this->Controls->Add(this->textBox_montantHT);
+			this->Controls->Add(this->textBox_montantTVA);
+			this->Controls->Add(this->textBox_montantTTC);
+			this->Controls->Add(this->listBox_nom);
+			this->Controls->Add(this->listBox_ref);
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
@@ -246,6 +253,7 @@ namespace G7interface {
 			this->Name = L"MyForm1";
 			this->Text = L"MyForm1";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_quantite))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

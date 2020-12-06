@@ -5,6 +5,7 @@
 #include"Article.h"
 #include "Commande.h"
 #include "Ville.h"
+#include "Choisir.h"
 using namespace System::Collections::Generic;
 
 

@@ -46,7 +46,7 @@ namespace G7interface {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -84,7 +84,6 @@ namespace G7interface {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -165,28 +164,17 @@ namespace G7interface {
 			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(537, 225);
+			this->dataGridView1->Cursor = System::Windows::Forms::Cursors::Default;
+			this->dataGridView1->Location = System::Drawing::Point(521, 321);
+			this->dataGridView1->MultiSelect = false;
 			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->RowTemplate->Height = 28;
+			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->dataGridView1->Size = System::Drawing::Size(525, 264);
 			this->dataGridView1->StandardTab = true;
 			this->dataGridView1->TabIndex = 4;
-			this->dataGridView1->UseWaitCursor = true;
-			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::Color::White;
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(527, 529);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(535, 81);
-			this->button5->TabIndex = 5;
-			this->button5->Text = L"Enregistrer";
-			this->button5->UseVisualStyleBackColor = false;
-			this->button5->Click += gcnew System::EventHandler(this, &FormeClient::button5_Click);
 			// 
 			// label1
 			// 
@@ -335,7 +323,6 @@ namespace G7interface {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button5);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);

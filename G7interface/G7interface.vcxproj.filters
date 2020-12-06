@@ -39,9 +39,6 @@
     <ClCompile Include="FormeClient.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="FormeCommande.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="FormeStatistiques.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -89,6 +86,12 @@
     </ClCompile>
     <ClCompile Include="Choisir.cpp">
       <Filter>Classes composantes</Filter>
+    </ClCompile>
+    <ClCompile Include="SVC_GStatistique.cpp">
+      <Filter>Classe service</Filter>
+    </ClCompile>
+    <ClCompile Include="FormeCommande.cpp">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="Choisir.h">
       <Filter>Classes composantes</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_GStatistique.h">
+      <Filter>Classe service</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

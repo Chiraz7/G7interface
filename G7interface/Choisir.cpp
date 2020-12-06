@@ -6,6 +6,8 @@ namespace Composant
 		this->Id_Commande = -1;
 		this->Quantité_Article = -1;
 		this->Remise = -1;
+		this->prix_ht=-1;
+		this->tva = -1;
 	}
 	String^ Choisir::SELECT(void)
 	{
