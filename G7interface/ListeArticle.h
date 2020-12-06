@@ -109,7 +109,7 @@ namespace G7interface {
 			this->dataGridView1->RowHeadersVisible = false;
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->dataGridView1->Size = System::Drawing::Size(648, 345);
+			this->dataGridView1->Size = System::Drawing::Size(786, 345);
 			this->dataGridView1->TabIndex = 0;
 			// 
 			// Reference
@@ -172,6 +172,8 @@ namespace G7interface {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label1->Location = System::Drawing::Point(32, 45);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(179, 29);
@@ -206,7 +208,7 @@ namespace G7interface {
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 29);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(671, 488);
+			this->ClientSize = System::Drawing::Size(825, 488);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
@@ -215,7 +217,10 @@ namespace G7interface {
 			this->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(4);
+			this->MaximumSize = System::Drawing::Size(825, 488);
+			this->MinimumSize = System::Drawing::Size(825, 488);
 			this->Name = L"Listearticle";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"Listearticle";
@@ -265,5 +270,5 @@ namespace G7interface {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
-	};
+};
 }

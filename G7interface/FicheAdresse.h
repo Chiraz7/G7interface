@@ -241,6 +241,9 @@ namespace G7interface {
 			this->Controls->Add(this->comboBox_Ville);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->dataGridView1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(1052, 673);
+			this->MinimumSize = System::Drawing::Size(1052, 673);
 			this->Name = L"FicheAdresse";
 			this->Text = L"FicheAdresse";
 			this->Load += gcnew System::EventHandler(this, &FicheAdresse::FicheAdresse_Load);

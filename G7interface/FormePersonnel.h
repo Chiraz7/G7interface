@@ -411,6 +411,9 @@ namespace G7interface {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->DoubleBuffered = true;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(1435, 790);
+			this->MinimumSize = System::Drawing::Size(1435, 790);
 			this->Name = L"FormePersonnel";
 			this->Text = L"FormePersonnel";
 			this->Load += gcnew System::EventHandler(this, &FormePersonnel::FormePersonnel_Load);

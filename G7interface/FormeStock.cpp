@@ -35,7 +35,7 @@ System::Void G7interface::FormeStock::FormeStock_Load(System::Object^ sender, Sy
 //Bouton retour
 System::Void G7interface::FormeStock::button6_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	return System::Void();
+	this->Close();
 }
 //Bouton enregistrer
 System::Void G7interface::FormeStock::button5_Click(System::Object^ sender, System::EventArgs^ e)

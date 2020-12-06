@@ -165,14 +165,16 @@ namespace G7interface {
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Cursor = System::Windows::Forms::Cursors::Default;
-			this->dataGridView1->Location = System::Drawing::Point(521, 321);
+			this->dataGridView1->Location = System::Drawing::Point(469, 266);
+			this->dataGridView1->MaximumSize = System::Drawing::Size(598, 316);
+			this->dataGridView1->MinimumSize = System::Drawing::Size(598, 316);
 			this->dataGridView1->MultiSelect = false;
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->RowTemplate->Height = 28;
 			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->dataGridView1->Size = System::Drawing::Size(525, 264);
+			this->dataGridView1->Size = System::Drawing::Size(598, 316);
 			this->dataGridView1->StandardTab = true;
 			this->dataGridView1->TabIndex = 4;
 			// 
@@ -296,12 +298,18 @@ namespace G7interface {
 			// 
 			// button_adresse
 			// 
-			this->button_adresse->Location = System::Drawing::Point(537, 161);
+			this->button_adresse->BackColor = System::Drawing::Color::Transparent;
+			this->button_adresse->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->button_adresse->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button_adresse->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button_adresse->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button_adresse->Location = System::Drawing::Point(622, 161);
 			this->button_adresse->Name = L"button_adresse";
-			this->button_adresse->Size = System::Drawing::Size(525, 45);
+			this->button_adresse->Size = System::Drawing::Size(288, 45);
 			this->button_adresse->TabIndex = 26;
 			this->button_adresse->Text = L"Adresse";
-			this->button_adresse->UseVisualStyleBackColor = true;
+			this->button_adresse->UseVisualStyleBackColor = false;
 			this->button_adresse->Click += gcnew System::EventHandler(this, &FormeClient::button7_Click);
 			// 
 			// FormeClient
@@ -310,7 +318,7 @@ namespace G7interface {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1091, 656);
+			this->ClientSize = System::Drawing::Size(1092, 668);
 			this->Controls->Add(this->button_adresse);
 			this->Controls->Add(this->dateTimePicker2_achat);
 			this->Controls->Add(this->dateTimePicker1);
@@ -329,6 +337,9 @@ namespace G7interface {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->DoubleBuffered = true;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(1114, 724);
+			this->MinimumSize = System::Drawing::Size(1114, 724);
 			this->Name = L"FormeClient";
 			this->Text = L"FormeClient";
 			this->Load += gcnew System::EventHandler(this, &FormeClient::FormeClient_Load);

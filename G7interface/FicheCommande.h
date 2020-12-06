@@ -164,7 +164,7 @@ namespace G7interface {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Calibri", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(27, 12);
+			this->label1->Location = System::Drawing::Point(27, 38);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(169, 39);
 			this->label1->TabIndex = 2;
@@ -213,6 +213,7 @@ namespace G7interface {
 			this->dataGridView1->AllowUserToAddRows = false;
 			this->dataGridView1->AllowUserToDeleteRows = false;
 			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dataGridView1->BackgroundColor = System::Drawing::SystemColors::ActiveCaption;
 			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
@@ -417,7 +418,7 @@ namespace G7interface {
 			// 
 			this->lblclient->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblclient->Location = System::Drawing::Point(394, 38);
+			this->lblclient->Location = System::Drawing::Point(397, 52);
 			this->lblclient->Name = L"lblclient";
 			this->lblclient->Size = System::Drawing::Size(216, 46);
 			this->lblclient->TabIndex = 41;

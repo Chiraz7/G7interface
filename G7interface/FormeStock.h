@@ -73,7 +73,7 @@ namespace G7interface {
 
 	private: System::Windows::Forms::TextBox^ textBox_prixHT;
 
-	private: System::Windows::Forms::TextBox^ textBox10;
+
 
 	private: System::Windows::Forms::NumericUpDown^ numericUpDown1_quantite;
 
@@ -118,7 +118,6 @@ namespace G7interface {
 			   this->textBox_prixTTC = (gcnew System::Windows::Forms::TextBox());
 			   this->textBox_PrixTVA = (gcnew System::Windows::Forms::TextBox());
 			   this->textBox_prixHT = (gcnew System::Windows::Forms::TextBox());
-			   this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			   this->numericUpDown1_quantite = (gcnew System::Windows::Forms::NumericUpDown());
 			   this->label10 = (gcnew System::Windows::Forms::Label());
 			   this->numericUpDown2_seuil = (gcnew System::Windows::Forms::NumericUpDown());
@@ -151,7 +150,7 @@ namespace G7interface {
 			   this->button2->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->button2->ForeColor = System::Drawing::Color::White;
-			   this->button2->Location = System::Drawing::Point(326, 183);
+			   this->button2->Location = System::Drawing::Point(355, 183);
 			   this->button2->Name = L"button2";
 			   this->button2->Size = System::Drawing::Size(166, 41);
 			   this->button2->TabIndex = 1;
@@ -183,7 +182,7 @@ namespace G7interface {
 			   this->button4->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->button4->ForeColor = System::Drawing::Color::White;
-			   this->button4->Location = System::Drawing::Point(326, 611);
+			   this->button4->Location = System::Drawing::Point(355, 616);
 			   this->button4->Name = L"button4";
 			   this->button4->Size = System::Drawing::Size(166, 41);
 			   this->button4->TabIndex = 3;
@@ -223,19 +222,19 @@ namespace G7interface {
 			   // 
 			   this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			   this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			   this->dataGridView1->Location = System::Drawing::Point(554, 183);
+			   this->dataGridView1->Location = System::Drawing::Point(544, 235);
 			   this->dataGridView1->Name = L"dataGridView1";
 			   this->dataGridView1->RowHeadersWidth = 62;
 			   this->dataGridView1->RowTemplate->Height = 28;
 			   this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			   this->dataGridView1->Size = System::Drawing::Size(559, 321);
+			   this->dataGridView1->Size = System::Drawing::Size(657, 366);
 			   this->dataGridView1->TabIndex = 8;
 			   // 
 			   // button6
 			   // 
 			   this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
 			   this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			   this->button6->Location = System::Drawing::Point(5, 4);
+			   this->button6->Location = System::Drawing::Point(12, 9);
 			   this->button6->Name = L"button6";
 			   this->button6->Size = System::Drawing::Size(56, 50);
 			   this->button6->TabIndex = 9;
@@ -377,15 +376,6 @@ namespace G7interface {
 			   this->textBox_prixHT->TabIndex = 24;
 			   this->textBox_prixHT->TextChanged += gcnew System::EventHandler(this, &FormeStock::calculTTC);
 			   // 
-			   // textBox10
-			   // 
-			   this->textBox10->Location = System::Drawing::Point(554, 535);
-			   this->textBox10->Multiline = true;
-			   this->textBox10->Name = L"textBox10";
-			   this->textBox10->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			   this->textBox10->Size = System::Drawing::Size(559, 117);
-			   this->textBox10->TabIndex = 25;
-			   // 
 			   // numericUpDown1_quantite
 			   // 
 			   this->numericUpDown1_quantite->Location = System::Drawing::Point(554, 90);
@@ -422,11 +412,10 @@ namespace G7interface {
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			   this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			   this->ClientSize = System::Drawing::Size(1142, 682);
+			   this->ClientSize = System::Drawing::Size(1213, 699);
 			   this->Controls->Add(this->numericUpDown2_seuil);
 			   this->Controls->Add(this->label10);
 			   this->Controls->Add(this->numericUpDown1_quantite);
-			   this->Controls->Add(this->textBox10);
 			   this->Controls->Add(this->textBox_prixHT);
 			   this->Controls->Add(this->textBox_PrixTVA);
 			   this->Controls->Add(this->textBox_prixTTC);
@@ -449,6 +438,9 @@ namespace G7interface {
 			   this->Controls->Add(this->button2);
 			   this->Controls->Add(this->button1);
 			   this->DoubleBuffered = true;
+			   this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			   this->MaximumSize = System::Drawing::Size(1235, 755);
+			   this->MinimumSize = System::Drawing::Size(1235, 755);
 			   this->Name = L"FormeStock";
 			   this->Text = L"FormeStock";
 			   this->Load += gcnew System::EventHandler(this, &FormeStock::FormeStock_Load);

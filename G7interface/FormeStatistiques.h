@@ -24,6 +24,8 @@ namespace G7interface {
 			//TODO: ajoutez ici le code du constructeur
 			//
 		}
+	private: System::Windows::Forms::Button^ button6;
+	public:
 	private:Service::SVC_Gstatistique^ gestionstats = gcnew Service::SVC_Gstatistique();
 
 	protected:
@@ -88,6 +90,7 @@ namespace G7interface {
 			this->valeur_stock = (gcnew System::Windows::Forms::Label());
 			this->panier_moyen = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView_plusvendus))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView_moins_vendus))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView_seuil))->BeginInit();
@@ -338,6 +341,17 @@ namespace G7interface {
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"Achat Client";
 			// 
+			// button6
+			// 
+			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
+			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button6->Location = System::Drawing::Point(19, 12);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(56, 50);
+			this->button6->TabIndex = 16;
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &FormeStatistiques::button6_Click);
+			// 
 			// FormeStatistiques
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -345,7 +359,8 @@ namespace G7interface {
 			this->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1474, 626);
+			this->ClientSize = System::Drawing::Size(1420, 654);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->panier_moyen);
 			this->Controls->Add(this->valeur_stock);
@@ -363,6 +378,9 @@ namespace G7interface {
 			this->Controls->Add(this->dataGridView_plusvendus);
 			this->Controls->Add(this->actualiser);
 			this->DoubleBuffered = true;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(1442, 710);
+			this->MinimumSize = System::Drawing::Size(1442, 710);
 			this->Name = L"FormeStatistiques";
 			this->Text = L"FormeStatistiques";
 			this->Load += gcnew System::EventHandler(this, &FormeStatistiques::FormeStatistiques_Load);
@@ -376,5 +394,6 @@ namespace G7interface {
 #pragma endregion
 	
 	private: System::Void FormeStatistiques_Load(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

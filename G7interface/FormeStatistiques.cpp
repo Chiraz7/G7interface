@@ -12,3 +12,8 @@ System::Void G7interface::FormeStatistiques::FormeStatistiques_Load(System::Obje
     montant_client->Text = this->gestionstats->calculertotalachat(Convert::ToInt32(lstclient->SelectedValue)).ToString();
     panier_moyen->Text = "Panier Moyen : " + this->gestionstats->calculerpaniermoyen();
 }
+
+System::Void G7interface::FormeStatistiques::button6_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    this->Close();
+}
