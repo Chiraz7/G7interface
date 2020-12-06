@@ -72,6 +72,7 @@ namespace G7interface {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm1::typeid));
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->textBox_montantHT = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_montantTVA = (gcnew System::Windows::Forms::TextBox());
@@ -91,14 +92,16 @@ namespace G7interface {
 			// 
 			// dataGridView1
 			// 
+			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridView1->BackgroundColor = System::Drawing::SystemColors::ControlLight;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(34, 207);
+			this->dataGridView1->Location = System::Drawing::Point(17, 224);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 62;
+			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
 			this->dataGridView1->RowTemplate->Height = 28;
 			this->dataGridView1->Size = System::Drawing::Size(998, 323);
 			this->dataGridView1->TabIndex = 0;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm1::dataGridView1_CellContentClick);
 			// 
 			// textBox_montantHT
 			// 
@@ -134,7 +137,7 @@ namespace G7interface {
 			// 
 			this->listBox_ref->FormattingEnabled = true;
 			this->listBox_ref->ItemHeight = 20;
-			this->listBox_ref->Location = System::Drawing::Point(192, 56);
+			this->listBox_ref->Location = System::Drawing::Point(192, 41);
 			this->listBox_ref->Name = L"listBox_ref";
 			this->listBox_ref->Size = System::Drawing::Size(343, 44);
 			this->listBox_ref->TabIndex = 40;
@@ -146,8 +149,8 @@ namespace G7interface {
 			this->label12->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label12->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label12->ForeColor = System::Drawing::Color::Black;
-			this->label12->Location = System::Drawing::Point(12, 56);
+			this->label12->ForeColor = System::Drawing::Color::Transparent;
+			this->label12->Location = System::Drawing::Point(12, 41);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(188, 29);
 			this->label12->TabIndex = 39;
@@ -160,7 +163,7 @@ namespace G7interface {
 			this->label11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label11->ForeColor = System::Drawing::Color::Black;
+			this->label11->ForeColor = System::Drawing::Color::Transparent;
 			this->label11->Location = System::Drawing::Point(12, 111);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(133, 29);
@@ -174,7 +177,7 @@ namespace G7interface {
 			this->label10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label10->ForeColor = System::Drawing::Color::Black;
+			this->label10->ForeColor = System::Drawing::Color::Transparent;
 			this->label10->Location = System::Drawing::Point(12, 171);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(111, 29);
@@ -188,7 +191,7 @@ namespace G7interface {
 			this->label9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->ForeColor = System::Drawing::Color::Black;
+			this->label9->ForeColor = System::Drawing::Color::Transparent;
 			this->label9->Location = System::Drawing::Point(553, 59);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(144, 29);
@@ -202,7 +205,7 @@ namespace G7interface {
 			this->label8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->ForeColor = System::Drawing::Color::Black;
+			this->label8->ForeColor = System::Drawing::Color::Transparent;
 			this->label8->Location = System::Drawing::Point(553, 115);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(156, 29);
@@ -216,7 +219,7 @@ namespace G7interface {
 			this->label7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->ForeColor = System::Drawing::Color::Black;
+			this->label7->ForeColor = System::Drawing::Color::Transparent;
 			this->label7->Location = System::Drawing::Point(553, 168);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(154, 29);
@@ -235,6 +238,7 @@ namespace G7interface {
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1063, 559);
 			this->Controls->Add(this->numericUpDown_quantite);
 			this->Controls->Add(this->textBox_montantHT);
@@ -252,6 +256,7 @@ namespace G7interface {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm1";
 			this->Text = L"MyForm1";
+			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown_quantite))->EndInit();
 			this->ResumeLayout(false);
@@ -259,5 +264,9 @@ namespace G7interface {
 
 		}
 #pragma endregion
-	};
+	private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+};
 }
